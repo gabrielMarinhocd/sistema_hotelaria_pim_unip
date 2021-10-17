@@ -21,3 +21,5 @@ Route::get('/', function () {
 Route::get('/menu', [MenuController::class,'index'])->name('menus');
 
 Route::get('/menu/{id}', [MenuController::class, 'show'])->name('menu_show');
+
+Route::get('/menu/delete/{id}', [MenuController::class,'destroy'])->name('menu_delete');
