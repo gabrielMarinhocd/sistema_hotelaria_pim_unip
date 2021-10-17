@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Controllers\MenuControlher;
+use App\Models\Menu;
 
 use Illuminate\Http\Request;
 
@@ -11,9 +13,21 @@ class MenuControlher extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    public function index() {
+            /*
+    return 'Estou no controle!!!'; // retorno de String
+    return view('minha_view'); // retorno de view sem
+    parâmetros
+     //retorno de Model
+    $nome = "Diego2";
+    return view('minha_view',['nome'=>$nome]); //passando
+    parâmetro para view
+    */
+
+        $menus = Menu::all();
+        return view('HunipHotel/menu',['menus'=>$menus]);
+        //return Menu::all();
+
     }
 
     /**
