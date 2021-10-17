@@ -95,5 +95,6 @@ class MenuController extends Controller
     public function destroy($id)
     {
         Menu::destroy($id);
+        return redirect()->route('alunos');
     }
 }
