@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MenuControlher;
+use App\Http\Controllers\MenuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('HunipHotel/home');
 })-> name('home');
 
-Route::get('/menu', [MenuControlher::class,'index'])->name('menus');
+Route::get('/menu', [MenuController::class,'index'])->name('menus');
+
+Route::get('/menu/{id}', [MenuController::class, 'show'])->name('menu_show');

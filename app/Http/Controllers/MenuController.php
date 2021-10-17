@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Controllers\MenuControlher;
+
 use App\Models\Menu;
 
 use Illuminate\Http\Request;
 
-class MenuControlher extends Controller
+class MenuController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -25,7 +25,7 @@ class MenuControlher extends Controller
     */
 
         $menus = Menu::all();
-        return view('HunipHotel/menu',['menus'=>$menus]);
+        return view('menu/menu',['menus'=>$menus]);
         //return Menu::all();
 
     }
@@ -59,7 +59,8 @@ class MenuControlher extends Controller
      */
     public function show($id)
     {
-        //
+        $menu = Menu::findOrFail($id);
+         return view('menu/menu_show',['menu'=>$menu]);
     }
 
     /**
@@ -70,7 +71,7 @@ class MenuControlher extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**

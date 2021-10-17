@@ -12,7 +12,7 @@ initial-scale=1.0">
 <body>
   <h1>Menus</h1>
 
-  <h2>forelse</h2>
+  <h2>Menu</h2>
   @foreach ($menus as $menu)
   {{$menu->id}} <br>
   {{$menu->nome}} <br>
