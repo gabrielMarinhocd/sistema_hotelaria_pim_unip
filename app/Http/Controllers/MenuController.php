@@ -41,7 +41,11 @@ class MenuController extends Controller
     {
        // dd($request);
        // Menu::create($request->all());
-        Menu::create($request->all());
+        $status = "ativo";
+        Menu::create(['nome'=>$request->nome,
+        'descricao'=> $request->descricao,
+        'status'=>'ativo']);
+
 
         return  $request;
     }
