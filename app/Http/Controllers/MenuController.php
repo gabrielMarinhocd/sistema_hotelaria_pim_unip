@@ -14,19 +14,10 @@ class MenuController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-            /*
-    return 'Estou no controle!!!'; // retorno de String
-    return view('minha_view'); // retorno de view sem
-    parâmetros
-     //retorno de Model
-    $nome = "Diego2";
-    return view('minha_view',['nome'=>$nome]); //passando
-    parâmetro para view
-    */
 
         $menus = Menu::all();
-        return view('menu/menu',['menus'=>$menus]);
-        //return Menu::all();
+       // return view('menu/menu',['menus'=>$menus]);
+        return "teste";
 
     }
 
@@ -37,7 +28,7 @@ class MenuController extends Controller
      */
     public function create()
     {
-        //
+      return view('menu/menu_add');
     }
 
     /**
@@ -48,7 +39,11 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       // dd($request);
+       // Menu::create($request->all());
+        Menu::create($request->all());
+
+        return  $request;
     }
 
     /**

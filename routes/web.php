@@ -13,13 +13,16 @@ use App\Http\Controllers\MenuController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('HunipHotel/home');
 })-> name('home');
 
 Route::get('/menu', [MenuController::class,'index'])->name('menus');
 
-Route::get('/menu/{id}', [MenuController::class, 'show'])->name('menu_show');
+Route::get('/menu/create', [MenuController::class,'create'])->name('menu_create');
+
+Route::get('/menu/show/{id}', [MenuController::class, 'show'])->name('menu_show');
 
 Route::get('/menu/delete/{id}', [MenuController::class,'destroy'])->name('menu_delete');
+
+Route::post('/menu/store', [MenuController::class, 'store'])->name('menu_store');
