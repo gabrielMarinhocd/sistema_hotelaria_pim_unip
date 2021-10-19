@@ -17,6 +17,18 @@ Route::get('/', function () {
     return view('HunipHotel/home');
 })-> name('home');
 
+Route::get('/Quartos', function () {
+    return view('HunipHotel/quartos');
+})-> name('quartos');
+
+Route::get('/SobreNos', function () {
+    return view('HunipHotel/about');
+})-> name('about');
+
+Route::get('/Reservas', function () {
+    return view('HunipHotel/reservas');
+})-> name('reservas');
+
 Route::get('/menu', [MenuController::class,'index'])->name('menus');
 
 Route::get('/menu/create', [MenuController::class,'create'])->name('menu_create');
