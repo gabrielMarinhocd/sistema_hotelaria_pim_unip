@@ -16,8 +16,7 @@ class MenuController extends Controller
     public function index() {
 
         $menus = Menu::all();
-       // return view('menu/menu',['menus'=>$menus]);
-        return "teste";
+       return view('menu/menu',['menus'=>$menus]);
 
     }
 
@@ -70,7 +69,8 @@ class MenuController extends Controller
      */
     public function edit($id)
     {
-
+        $menu = Menu::findOrFail($id);
+        return view('/menu/menu_edit',['menu'=>$menu]);
     }
 
     /**
@@ -82,7 +82,9 @@ class MenuController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $menu = Menu::findOrFail($id);
+        $menu->update($request->all());
+        return redirect('/menu');
     }
 
     /**
@@ -94,6 +96,6 @@ class MenuController extends Controller
     public function destroy($id)
     {
         Menu::destroy($id);
-        return redirect()->route('alunos');
+        return redirect()->route('menu');
     }
 }

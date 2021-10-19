@@ -26,3 +26,7 @@ Route::get('/menu/show/{id}', [MenuController::class, 'show'])->name('menu_show'
 Route::get('/menu/delete/{id}', [MenuController::class,'destroy'])->name('menu_delete');
 
 Route::post('/menu/store', [MenuController::class, 'store'])->name('menu_store');
+
+Route::get('/menu/edit/{id}', [MenuController::class, 'edit'])->name('menu_edit');
+
+Route::post('/menu_update/{id}', [MenuController::class,'update'])->name('menu_update');
