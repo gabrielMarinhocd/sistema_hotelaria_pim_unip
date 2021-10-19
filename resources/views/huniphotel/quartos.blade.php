@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="{{url(mix('huniphotel/style.css'))}}">
   <title>Hunip Hotel Quartos</title>
   <style>
+    /*Lembrar de colocar um hover nos links dos quartos*/
     body{
       background-color: whitesmoke;
     }
@@ -79,7 +80,7 @@
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <a href="#" target="_self" class="card-title" style="font-family:'Poppins';font-weight:800;font-size:1.1rem;color:#B8891F;text-decoration:none;">QUARTO PREMIUM CASAL</a>
+                  <a href="{{route('quarto-premium-casal')}}" target="_self" class="card-title" style="font-family:'Poppins';font-weight:800;font-size:1.1rem;color:#B8891F;text-decoration:none;">QUARTO PREMIUM CASAL</a>
                   <p class="card-text" style="font-family:'Poppins';font-weight:600;">O Quarto Luxo Premium oferece acomodações 5 estrelas com varandas privativas.</p>
                   <p class="card-text"><small class="text-muted" style="font-size:.8rem">Casais particularmente gostam da localização eles deram nota 9,7 para viagem a dois. </small></p>
                 </div>
@@ -94,7 +95,7 @@
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <a href="#" target="_self" class="card-title" style="font-family:'Poppins';font-weight:800;font-size:1.1rem;color:#B8891F;text-decoration:none;">PREMIUM TWIN SOLTEIRO</a>
+                  <a href="{{route('premium-twin-solteiro')}}" target="_self" class="card-title" style="font-family:'Poppins';font-weight:800;font-size:1.1rem;color:#B8891F;text-decoration:none;">PREMIUM TWIN SOLTEIRO</a>
                   <p class="card-text" style="font-family:'Poppins';font-weight:600;">Em andares mais altos que os Master Twin Solteiros, o Premium Twin dispõe de uma bela vista e decoração nos mínimos detalhes.</p>
                   <p class="card-text"><small class="text-muted" style="font-size:.8rem">É o quarto que os hospedes mais elogiam</small></p>
                 </div>
@@ -112,7 +113,7 @@
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <a href="#" target="_self" class="card-title" style="font-family:'Poppins';font-weight:800;font-size:1.1rem;color:#B8891F;text-decoration:none;">QUARTO MASTER CASAL</a>
+                  <a href="{{route('quarto-master-casal')}}" target="_self" class="card-title" style="font-family:'Poppins';font-weight:800;font-size:1.1rem;color:#B8891F;text-decoration:none;">QUARTO MASTER CASAL</a>
                   <p class="card-text" style="font-family:'Poppins';font-weight:600;">A Suíte Master Casal é ideal para clientes que querem uma viajem mais tranquila e aconchegante.</p>
                   <p class="card-text" ><small class="text-muted" style="font-size:.8rem">O quarto é muito reinvindicado por casais para passar o ano novo</small></p>
                 </div>
@@ -127,7 +128,7 @@
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <a href="#" target="_self" class="card-title" style="font-family:'Poppins';font-weight:800;font-size:1.1rem;color:#B8891F;text-decoration:none;">MASTER SOLTEIRO</a>
+                  <a href="{{route('master-solteiro')}}" target="_self" class="card-title" style="font-family:'Poppins';font-weight:800;font-size:1.1rem;color:#B8891F;text-decoration:none;">MASTER SOLTEIRO</a>
                   <p class="card-text" style="font-family:'Poppins';font-weight:600;">O quarto Master Solteiro um apartamento que cuida do seu descanso com conforto e praticidade.</p>
                   <p class="card-text" ><small class="text-muted" style="font-size:.8rem">O quarto mais pedido do hotel</small></p>
                 </div>
@@ -145,7 +146,7 @@
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <a href="#" target="_self" class="card-title" style="font-family:'Poppins';font-weight:800;font-size:1.1rem;color:#B8891F;text-decoration:none;">QUARTO STANDART CASAL</a>
+                  <a href="{{route('quarto-standart-casal')}}" target="_self" class="card-title" style="font-family:'Poppins';font-weight:800;font-size:1.1rem;color:#B8891F;text-decoration:none;">QUARTO STANDART CASAL</a>
                   <p class="card-text" style="font-family:'Poppins';font-weight:600;">Para quem busca um quarto funcional, mas com padrão internacional de hospedagem e conforto.</p>
                   <p class="card-text" ><small class="text-muted" style="font-size:.8rem">O quarto mais reinvindicado por casais</small></p>
                 </div>
@@ -160,7 +161,7 @@
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <a href="#" target="_self" class="card-title" style="font-family:'Poppins';font-weight:800;font-size:1.1rem;color:#B8891F;text-decoration:none;">STANDART TWIN SOLTEIRO</a>
+                  <a href="{{route('standart-twin-solteiro')}}" target="_self" class="card-title" style="font-family:'Poppins';font-weight:800;font-size:1.1rem;color:#B8891F;text-decoration:none;">STANDART TWIN SOLTEIRO</a>
                   <p class="card-text" style="font-family:'Poppins';font-weight:600;">Para quem busca um quarto confortável, mas com design clean para maior concentração no trabalho.</p>
                   <p class="card-text"><small class="text-muted" style="font-size:.8rem">É o quarto mais ultilizado por viagens á trabalho</small></p>
                 </div>

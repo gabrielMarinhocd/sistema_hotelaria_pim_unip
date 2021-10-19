@@ -13,6 +13,8 @@ use App\Http\Controllers\MenuController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+/*Rotas das páginas principais do usuário*/
 Route::get('/', function () {
     return view('huniphotel/home');
 })-> name('home');
@@ -28,6 +30,32 @@ Route::get('/sobre-nos', function () {
 Route::get('/reservas', function () {
     return view('huniphotel/reservas');
 })-> name('reservas');
+
+/*Rotas das páginas de quartos*/
+
+Route::get('/quarto/quarto-premium-casal', function () {
+    return view('huniphotel/quarto/quarto-premium-casal');
+})-> name('quarto-premium-casal');
+
+Route::get('/quarto/premium-twin-solteiro', function () {
+    return view('huniphotel/quarto/premium-twin-solteiro');
+})-> name('premium-twin-solteiro');
+
+Route::get('/quarto/quarto-master-casal', function () {
+    return view('huniphotel/quarto/quarto-master-casal');
+})-> name('quarto-master-casal');
+
+Route::get('/quarto/master-solteiro', function () {
+    return view('huniphotel/quarto/master-solteiro');
+})-> name('master-solteiro');
+
+Route::get('/quarto/quarto-standart-casal', function () {
+    return view('huniphotel/quarto/quarto-standart-casal');
+})-> name('quarto-standart-casal');
+
+Route::get('/quarto/standart-twin-solteiro', function () {
+    return view('huniphotel/quarto/standart-twin-solteiro');
+})-> name('standart-twin-solteiro');
 
 Route::get('/menu', [MenuController::class,'index'])->name('menus');
 
