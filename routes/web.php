@@ -14,19 +14,19 @@ use App\Http\Controllers\MenuController;
 |
 */
 Route::get('/', function () {
-    return view('HunipHotel/home');
+    return view('huniphotel/home');
 })-> name('home');
 
-Route::get('/Quartos', function () {
-    return view('HunipHotel/quartos');
+Route::get('/quartos', function () {
+    return view('huniphotel/quartos');
 })-> name('quartos');
 
-Route::get('/SobreNos', function () {
-    return view('HunipHotel/about');
+Route::get('/sobre-nos', function () {
+    return view('huniphotel/about');
 })-> name('about');
 
-Route::get('/Reservas', function () {
-    return view('HunipHotel/reservas');
+Route::get('/reservas', function () {
+    return view('huniphotel/reservas');
 })-> name('reservas');
 
 Route::get('/menu', [MenuController::class,'index'])->name('menus');

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <!--Style-->
-  <link rel="stylesheet" href="{{url(mix('HunipHotel/style.css'))}}">
+  <link rel="stylesheet" href="{{url(mix('huniphotel/style.css'))}}">
   <style>
     #navigation-bar{
       width: 100%;
@@ -40,7 +40,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed" id="navigation-bar">
     <div class="container">
-      <a href="{{route('home')}}" class="navbar-brand" style="font-family:'Poppins';font-weight:800;font-size:1rem;">HUNIP <span style="color:#B8891F">HOTEL</span></a>
+      <a href="{{route('home')}}" target="_self" class="navbar-brand" style="font-family:'Poppins';font-weight:800;font-size:1rem;">HUNIP <span style="color:#B8891F">HOTEL</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -72,7 +72,7 @@
     </section>
     
   </main>
-  <script src="{{url(mix('HunipHotel/jquery.js'))}}"></script>
-  <script src="{{url(mix('HunipHotel/bootstrap.js'))}}"></script>
+  <script src="{{url(mix('huniphotel/jquery.js'))}}"></script>
+  <script src="{{url(mix('huniphotel/bootstrap.js'))}}"></script>
 </body>
 </html>
