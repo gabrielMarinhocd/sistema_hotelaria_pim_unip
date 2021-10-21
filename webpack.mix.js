@@ -13,12 +13,12 @@ const mix = require("laravel-mix");
  */
 
 mix.scripts(["node_modules/jquery/dist/jquery.js"
-    ],"public/HunipHotel/jquery.js"
+    ],"public/huniphotel/jquery.js"
     ).version()
     .scripts(["node_modules/bootstrap/dist/js/bootstrap.bundle.js"
-    ],"public/HunipHotel/bootstrap.js"
+    ],"public/huniphotel/bootstrap.js"
     ).version()
     .styles(["node_modules/bootstrap/dist/css/bootstrap.css"
-    ],"public/HunipHotel/style.css"
+    ],"public/huniphotel/style.css"
     ).version();
     
