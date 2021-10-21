@@ -13,6 +13,8 @@ use App\Http\Controllers\MenuController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//Roatas de Página
 Route::get('/', function () {
     return view('HunipHotel/home');
 })-> name('home');
@@ -29,6 +31,7 @@ Route::get('/Reservas', function () {
     return view('HunipHotel/reservas');
 })-> name('reservas');
 
+//Rotas CRUD
 Route::get('/menu', [MenuController::class,'index'])->name('menus');
 
 Route::get('/menu/create', [MenuController::class,'create'])->name('menu_create');
@@ -42,3 +45,5 @@ Route::post('/menu/store', [MenuController::class, 'store'])->name('menu_store')
 Route::get('/menu/edit/{id}', [MenuController::class, 'edit'])->name('menu_edit');
 
 Route::post('/menu_update/{id}', [MenuController::class,'update'])->name('menu_update');
+
+Route::get('/perfil', [PerfilController::class,'index'])->name('perfil');
