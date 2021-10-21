@@ -14,7 +14,6 @@ use App\Http\Controllers\MenuController;
 |
 */
 
-/*Rotas das páginas principais do usuário*/
 Route::get('/', function () {
     return view('huniphotel/home');
 })-> name('home');
@@ -31,31 +30,6 @@ Route::get('/reservas', function () {
     return view('huniphotel/reservas');
 })-> name('reservas');
 
-/*Rotas das páginas de quartos*/
-
-Route::get('/quarto/quarto-premium-casal', function () {
-    return view('huniphotel/quarto/quarto-premium-casal');
-})-> name('quarto-premium-casal');
-
-Route::get('/quarto/premium-twin-solteiro', function () {
-    return view('huniphotel/quarto/premium-twin-solteiro');
-})-> name('premium-twin-solteiro');
-
-Route::get('/quarto/quarto-master-casal', function () {
-    return view('huniphotel/quarto/quarto-master-casal');
-})-> name('quarto-master-casal');
-
-Route::get('/quarto/master-solteiro', function () {
-    return view('huniphotel/quarto/master-solteiro');
-})-> name('master-solteiro');
-
-Route::get('/quarto/quarto-standart-casal', function () {
-    return view('huniphotel/quarto/quarto-standart-casal');
-})-> name('quarto-standart-casal');
-
-Route::get('/quarto/standart-twin-solteiro', function () {
-    return view('huniphotel/quarto/standart-twin-solteiro');
-})-> name('standart-twin-solteiro');
 
 Route::get('/menu', [MenuController::class,'index'])->name('menus');
 
@@ -70,3 +44,5 @@ Route::post('/menu/store', [MenuController::class, 'store'])->name('menu_store')
 Route::get('/menu/edit/{id}', [MenuController::class, 'edit'])->name('menu_edit');
 
 Route::post('/menu_update/{id}', [MenuController::class,'update'])->name('menu_update');
+
+Route::get('/perfil', [PerfilController::class,'index'])->name('perfil');
