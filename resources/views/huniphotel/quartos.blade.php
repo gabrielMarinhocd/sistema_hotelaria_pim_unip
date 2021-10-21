@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="{{url(mix('huniphotel/style.css'))}}">
   <title>Hunip Hotel Quartos</title>
   <style>
-    /*Lembrar de colocar um hover nos links dos quartos*/
     body{
       background-color: whitesmoke;
     }
@@ -35,6 +34,25 @@
       margin-top: 1.5rem;
       margin-bottom: 2rem !important;
       box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.09);
+    }
+    #section-quartos .line-quartos .card a.card-title{
+      transition: color .2s;
+    }
+    #section-quartos .line-quartos .card a.card-title:hover{
+      color: #735B22 !important;
+    }
+    @media (max-width: 1200px){
+      #section-quartos .line-quartos{
+        flex-direction: column;
+      }
+      #section-quartos .line-quartos .card{
+        margin-bottom: 1rem !important;
+      }
+    }
+    @media (max-width: 991px){
+      #section-quartos .line-quartos{
+        align-items: center;
+      }
     }
   </style>
 </head>
