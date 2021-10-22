@@ -84,3 +84,7 @@ Route::get('/perfil/create', [PerfilController::class,'create'])->name('perfil_c
 Route::post('/perfil/store', [PerfilController::class, 'store'])->name('perfil_store');
 
 Route::get('/perfil/show/{id}', [PerfilController::class, 'show'])->name('perfil_show');
+
+Route::get('/perfil/edit/{id}', [PerfilController::class, 'edit'])->name('perfil_edit');
+
+Route::post('/perfil_update/{id}', [PerfilController::class,'update'])->name('perfil_update');

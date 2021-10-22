@@ -67,8 +67,8 @@ class PerfilController extends Controller
      */
     public function edit($id)
     {
-        // $perfil =Perfil::findOrFail($id);
-        // return view('/perfil/perfil_edit',['perfil'=>$perfil]);
+        $perfil =Perfil::findOrFail($id);
+        return view('/perfil/perfil_edit',['perfil'=>$perfil]);
     }
 
     /**
@@ -80,9 +80,9 @@ class PerfilController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $perfil =Perfil::findOrFail($id);
-        // $perfil->update($request->all());
-        // return redirect('/perfil');
+        $perfil =Perfil::findOrFail($id);
+        $perfil->update($request->all());
+        return redirect('/perfil');
     }
 
     /**
