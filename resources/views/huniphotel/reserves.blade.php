@@ -10,11 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <!--Style-->
   <link rel="stylesheet" href="{{url(mix('huniphotel/style.css'))}}">
-  <title>Hunip Hotel Quartos</title>
+  <title>Hunip Hotel Reservas</title>
   <style>
-    body{
-      background-color: whitesmoke;
-    }
     #navigation-bar{
       width: 100%;
       z-index: 100;
@@ -34,13 +31,13 @@
             <a href="{{route('home')}}" class="nav-link" target="_self" style="font-family:'Poppins';font-weight:500;font-size:1rem;">HOME</a>
           </li>
           <li class="nav-item">
-            <a href="{{route('quartos')}}" class="nav-link active" target="_self" style="font-family:'Poppins';font-weight:500;font-size:1rem;">QUARTOS</a>
+            <a href="{{route('rooms')}}" class="nav-link" target="_self" style="font-family:'Poppins';font-weight:500;font-size:1rem;">QUARTOS</a>
           </li>
           <li class="nav-item">
             <a href="{{route('about')}}" class="nav-link" target="_self" style="font-family:'Poppins';font-weight:500;font-size:1rem;">SOBRE-NÓS</a>
           </li>
           <li class="nav-item">
-            <a href="{{route('reservas')}}" class="nav-link" target="_self" style="font-family:'Poppins';font-weight:500;font-size:1rem;">RESERVAS</a>
+            <a href="{{route('reserves')}}" class="nav-link active" target="_self" style="font-family:'Poppins';font-weight:500;font-size:1rem;">RESERVAS</a>
           </li>
         </ul>
       </div>
@@ -48,6 +45,7 @@
     </div>
     
   </nav>
+  
   <script src="{{url(mix('huniphotel/bootstrap.js'))}}"></script>
 </body>
 </html>

@@ -14,23 +14,50 @@ use App\Http\Controllers\PerfilController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*Rotas Principais do Usuário*/
 Route::get('/', function () {
     return view('huniphotel/home');
 })-> name('home');
 
-Route::get('/quartos', function () {
-    return view('huniphotel/quartos');
-})-> name('quartos');
+Route::get('/rooms', function () {
+    return view('huniphotel/rooms');
+})-> name('rooms');
 
-Route::get('/sobre-nos', function () {
+Route::get('/about', function () {
     return view('huniphotel/about');
 })-> name('about');
 
-Route::get('/reservas', function () {
-    return view('huniphotel/reservas');
-})-> name('reservas');
+Route::get('/reserves', function () {
+    return view('huniphotel/reserves');
+})-> name('reserves');
 
+/*Rotas dos Quartos*/
+
+/*Rotas das páginas de quartos*/
+
+Route::get('/room/quarto-premium-casal', function () {
+    return view('huniphotel/room/quarto-premium-casal');
+})-> name('quarto-premium-casal');
+
+Route::get('/room/premium-twin-solteiro', function () {
+    return view('huniphotel/room/premium-twin-solteiro');
+})-> name('premium-twin-solteiro');
+
+Route::get('/room/quarto-master-casal', function () {
+    return view('huniphotel/room/quarto-master-casal');
+})-> name('quarto-master-casal');
+
+Route::get('/room/master-solteiro', function () {
+    return view('huniphotel/room/master-solteiro');
+})-> name('master-solteiro');
+
+Route::get('/room/quarto-standart-casal', function () {
+    return view('huniphotel/room/quarto-standart-casal');
+})-> name('quarto-standart-casal');
+
+Route::get('/room/standart-twin-solteiro', function () {
+    return view('huniphotel/room/standart-twin-solteiro');
+})-> name('standart-twin-solteiro');
 
 Route::get('/menu', [MenuController::class,'index'])->name('menus');
 
