@@ -26,7 +26,7 @@ class PerfilController extends Controller
      */
     public function create()
     {
-    //   return view('perfil/perfil_add');
+     return view('perfil/perfil_add');
     }
 
     /**
@@ -37,15 +37,14 @@ class PerfilController extends Controller
      */
     public function store(Request $request)
     {
-    //    // dd($request);
-    //    //perfil::create($request->all());
-    //     $status = "ativo";
-    //    Perfil::create(['nome'=>$request->nome,
-    //     'link'=> $request->link,
-    //     'status'=>'ativo']);
+       // dd($request);
+       //perfil::create($request->all());
+        Perfil::create(['nome'=>$request->nome,
+        'descricao'=> $request->descricao,
+        'status'=>'ativo']);
 
 
-    //     return  $request;
+         return view('perfil/perfil_add');
     }
 
     /**
