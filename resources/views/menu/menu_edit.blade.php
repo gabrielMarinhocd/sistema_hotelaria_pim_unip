@@ -14,7 +14,7 @@ initial-scale=1.0">
   <form method="POST" action="{{ url('menu_update') }}/{{
 $menu->id }}">
     @csrf<input id="nome" type="text" name="nome" value="{{$menu->nome}}">
-    <input id="ra" type="text" name="descricao" value="{{$menu->descricao}}">
+    <input id="ra" type="text" name="link" value="{{$menu->link}}">
     <button type="submit" class="btn btnprimary">Editar</button>
   </form>
 </body>

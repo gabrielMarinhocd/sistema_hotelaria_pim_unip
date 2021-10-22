@@ -1,22 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Menu;
+use App\Models\Perfil;
 
 use Illuminate\Http\Request;
 
-class MenuController extends Controller
+class PerfilController extends Controller
 {
-    /**
+   /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index() {
 
-        $menus = Menu::all();
-       return view('menu/menu',['menus'=>$menus]);
+        $perfils = Perfil::all();
+       return view('perfil/perfil',['perfils'=>$perfils]);
 
     }
 
@@ -27,7 +26,7 @@ class MenuController extends Controller
      */
     public function create()
     {
-      return view('menu/menu_add');
+    //   return view('perfil/perfil_add');
     }
 
     /**
@@ -38,15 +37,15 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
-       // dd($request);
-       // Menu::create($request->all());
-        $status = "ativo";
-        Menu::create(['nome'=>$request->nome,
-        'link'=> $request->link,
-        'status'=>'ativo']);
+    //    // dd($request);
+    //    //perfil::create($request->all());
+    //     $status = "ativo";
+    //    Perfil::create(['nome'=>$request->nome,
+    //     'link'=> $request->link,
+    //     'status'=>'ativo']);
 
 
-        return  $request;
+    //     return  $request;
     }
 
     /**
@@ -57,8 +56,8 @@ class MenuController extends Controller
      */
     public function show($id)
     {
-        $menu = Menu::findOrFail($id);
-         return view('menu/menu_show',['menu'=>$menu]);
+        $perfil = Perfil::findOrFail($id);
+         return view('perfil/perfil_show',['perfil'=>$perfil]);
     }
 
     /**
@@ -69,8 +68,8 @@ class MenuController extends Controller
      */
     public function edit($id)
     {
-        $menu = Menu::findOrFail($id);
-        return view('/menu/menu_edit',['menu'=>$menu]);
+        // $perfil =Perfil::findOrFail($id);
+        // return view('/perfil/perfil_edit',['perfil'=>$perfil]);
     }
 
     /**
@@ -82,9 +81,9 @@ class MenuController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $menu = Menu::findOrFail($id);
-        $menu->update($request->all());
-        return redirect('/menu');
+        // $perfil =Perfil::findOrFail($id);
+        // $perfil->update($request->all());
+        // return redirect('/perfil');
     }
 
     /**
@@ -95,7 +94,7 @@ class MenuController extends Controller
      */
     public function destroy($id)
     {
-        Menu::destroy($id);
-        return redirect()->route('menu');
+    //    Perfil::destroy($id);
+    //     return redirect()->route('perfil');
     }
 }

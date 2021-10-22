@@ -10,14 +10,14 @@ initial-scale=1.0">
 </head>
 
 <body>
-  <h1>Menus</h1>
+  <h1>Perfiss</h1>
 
-  <h2>Menu</h2>
-  @foreach ($menus as $menu)
-  {{$menu->id}} <br>
-  {{$menu->nome}} <br>
-  {{$menu->link}}<br>
-  {{$menu->status}}
+  <h2>Perfis</h2>
+  @foreach ($perfils as $perfil)
+  {{$perfil->id}} <br>
+  {{$perfil->nome}} <br>
+  {{$perfil->descricao}}<br>
+  {{$perfil->status}}
   @endforeach
 
 </body>

@@ -14,7 +14,7 @@ initial-scale=1.0">
   <form method="POST" action="{{ route('menu_store') }}">
     @csrf
     <input id="nome" type="text" name="nome">
-    <input id="descricao" type="text" name="descricao">
+    <input id="link" type="text" name="link">
     <button type="submit">Inserir</button>
   </form>
 </body>

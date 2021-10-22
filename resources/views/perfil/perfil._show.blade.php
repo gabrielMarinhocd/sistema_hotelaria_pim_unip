@@ -6,20 +6,19 @@
   <meta name="viewport" content="width=device-width,
 initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Menu View</title>
+  <title>perfil View</title>
 </head>
 
 <body>
-  <h1>Menus</h1>
 
-  <h2>Menu</h2>
-  @foreach ($menus as $menu)
-  {{$menu->id}} <br>
-  {{$menu->nome}} <br>
-  {{$menu->link}}<br>
-  {{$menu->status}}
-  @endforeach
+  <h2>perfil</h2>
+  <hr>
+  <p> {{$perfil->id}} </p>
+  <p>{{$perfil->nome}} </p>
+  <p>{{$perfil->descricao}}</p>
+  <p>{{$perfil->status}}</p>
 
 </body>
+
 
 </html>
