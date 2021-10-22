@@ -82,3 +82,5 @@ Route::get('/perfil', [PerfilController::class,'index'])->name('perfil');
 Route::get('/perfil/create', [PerfilController::class,'create'])->name('perfil_create');
 
 Route::post('/perfil/store', [PerfilController::class, 'store'])->name('perfil_store');
+
+Route::get('/perfil/show/{id}', [PerfilController::class, 'show'])->name('perfil_show');

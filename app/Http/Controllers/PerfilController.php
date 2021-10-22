@@ -56,7 +56,7 @@ class PerfilController extends Controller
     public function show($id)
     {
         $perfil = Perfil::findOrFail($id);
-         return view('perfil/perfil_show',['perfil'=>$perfil]);
+        return view('perfil/perfil_show',['perfil'=>$perfil]);
     }
 
     /**
