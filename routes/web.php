@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\PerfilController;
+use App\Http\Controllers\QuartoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -90,3 +91,19 @@ Route::get('/perfil/edit/{id}', [PerfilController::class, 'edit'])->name('perfil
 Route::post('/perfil_update/{id}', [PerfilController::class,'update'])->name('perfil_update');
 
 Route::get('/perfil/delete/{id}', [PerfilController::class,'destroy'])->name('perfil_delete');
+
+//Quarto
+
+Route::get('/quarto', [QuartoController::class,'index'])->name('quarto');
+
+Route::get('/quarto/create', [QuartoController::class,'create'])->name('quarto_create');
+
+Route::post('/quarto/store', [QuartoController::class, 'store'])->name('quarto_store');
+
+Route::get('/quarto/show/{id}', [QuartoController::class, 'show'])->name('quarto_show');
+
+Route::get('/quarto/edit/{id}', [QuartoController::class, 'edit'])->name('quarto_edit');
+
+Route::post('/quarto_update/{id}', [QuartoController::class,'update'])->name('quarto_update');
+
+Route::get('/quarto/delete/{id}', [QuartoController::class,'destroy'])->name('quarto_delete');
