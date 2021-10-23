@@ -20,7 +20,7 @@
       z-index: 100;
     }
     #section-quartos h2{
-      padding-top: 15rem;
+      padding-top: 8rem;
       font-family: 'Poppins';
       font-weight: 800;
       font-size: 2rem;
@@ -32,7 +32,7 @@
     }
     #section-quartos .line-quartos .card{
       margin-top: 1.5rem;
-      margin-bottom: 2rem !important;
+      margin-bottom: 1rem !important;
       box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.09);
     }
     #section-quartos .line-quartos .card a.card-title{
@@ -85,7 +85,7 @@
   </nav>
   <main>
     <!--OS CARDS AINDA NÃO ESTÃO RESPONSIVOS, PRECISA FAZER UM BREAKPOINT PARA DISPOSITIVOS MENORES-->
-    <!--TROCANDO O FLEX-DIRECTION PARA COLUNAS E ALINHANDO OS CARDS NO CENTRO-->
+    <!--ARRUMAR AS IMAGENS POR CIMA DOS CARDS EM DISPOSITIVOS MENORES-->
     <section id="section-quartos" class="container">
       <h2 class="text-black">QUARTOS E SUÍTES</h2>
       <hr>

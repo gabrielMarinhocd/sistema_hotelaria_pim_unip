@@ -14,10 +14,25 @@
   <style>
     body{
       background-color: whitesmoke;
+      font-family: 'Poppins';
     }
     #navigation-bar{
       width: 100%;
       z-index: 100;
+    }
+    #section-quarto{
+      flex-direction: column;
+    }
+    #section-quarto h2{
+      padding-top: 8rem;
+      font-weight: 800;
+      font-size: 2rem;
+    }
+    #section-quarto .imagem-quarto img{
+      border-radius: 10px;
+    }
+    #section-quarto .text-quarto p{
+      color: #888888;
     }
   </style>
 </head>
@@ -48,6 +63,39 @@
     </div>
     
   </nav>
+  <main>
+    <section id="section-quarto" class="container">
+      <h2 style="text-align: center;">QUARTO PREMIUM CASAL</h2>
+      <hr>
+      <div class="box-1" style="display:flex;">
+        <div class="imagem-quarto container">
+          <img src="{{asset('images/premium-room.jpg')}}" alt="foto do quarto premium" class="img-fluid">
+        </div>
+        <div class="dados-quarto container" style="border: 1px solid #dddddd; border-radius: 10px; color: #888888;">
+          <h3 style="text-align: center; margin-top: 0.5rem;font-weight: 800;">RECURSOS</h3><hr>
+          <p>TV DE TELA PLANA</p>
+          <p>AR CONDICIONADO</p>
+          <p>CANAIS POR SATÉLITE</p>
+          <p>COFRE PORTÁTIL</p>
+          <p>CANAIS A CABO</p>
+          <p>ESPAÇO PARA PASSAR ROUPA</p>
+        </div>
+      </div>
+      <div class="container text-quarto" style="margin-top: 2rem; margin-bottom: 2rem; text-align: center;">
+        <h3 style="font-weight: 800;">DESCRIÇÃO</h3>
+        <p>
+          Para quem busca um quarto funcional, mas com padrão internacional de hospedagem, tem como opção o Quarto Premium Casal. Equipado com cama de casal Queen Size, o apartamento leva consigo uma decoração moderna e enxoval sofisticado.
+        </p>
+        <p>
+          A segurança é um ponto muito trabalhado nas acomodações do Hotel. Aqui você estará seguro, pois o hotel conta com fechaduras magnéticas por cartão, cofre no quarto, alarmes de incêndio e informações emergenciais disponíveis para os hóspedes.
+        </p>
+        <p>
+          Aproveite tudo o que a Avenida Paulista pode oferecer em um dos hotéis mais bem avaliados de São Paulo, o Hunip Hotel.
+        </p>
+        <a href="" class="btn btn-warning button-reserve" style="width: 100%; margin-top: 2rem;">Reserve-já</a>
+      </div>
+    </section>
+  </main>
   <script src="{{url(mix('huniphotel/bootstrap.js'))}}"></script>
 </body>
 </html>
