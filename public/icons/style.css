@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?wirfq0');
+  src:  url('fonts/icomoon.eot?wirfq0#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?wirfq0') format('truetype'),
+    url('fonts/icomoon.woff?wirfq0') format('woff'),
+    url('fonts/icomoon.svg?wirfq0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-network_wifi:before {
+  content: "\e900";
+}
+.icon-tv1:before {
+  content: "\e901";
+}
+.icon-map:before {
+  content: "\e903";
+}
+.icon-event_note:before {
+  content: "\e904";
+}
+.icon-calendar_today:before {
+  content: "\e905";
+}
+.icon-connected_tv:before {
+  content: "\e907";
+}
+.icon-map1:before {
+  content: "\e908";
+}
+.icon-map-pin:before {
+  content: "\e906";
+}
+.icon-send:before {
+  content: "\e902";
+}
+.icon-plus:before {
+  content: "\f067";
+}
+.icon-minus:before {
+  content: "\f068";
+}
+.icon-envelope-o:before {
+  content: "\f003";
+}
+.icon-heart:before {
+  content: "\f004";
+}
+.icon-star:before {
+  content: "\f005";
+}
+.icon-star-o:before {
+  content: "\f006";
+}
+.icon-user:before {
+  content: "\f007";
+}
+.icon-check:before {
+  content: "\f00c";
+}
+.icon-close:before {
+  content: "\f00d";
+}
+.icon-remove:before {
+  content: "\f00d";
+}
+.icon-times:before {
+  content: "\f00d";
+}
+.icon-cog:before {
+  content: "\f013";
+}
+.icon-gear:before {
+  content: "\f013";
+}
+.icon-trash-o:before {
+  content: "\f014";
+}
+.icon-arrow-left:before {
+  content: "\f060";
+}
+.icon-eye:before {
+  content: "\f06e";
+}
+.icon-eye-slash:before {
+  content: "\f070";
+}
+.icon-key:before {
+  content: "\f084";
+}
+.icon-phone:before {
+  content: "\f095";
+}
+.icon-phone-square:before {
+  content: "\f098";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-facebook-f:before {
+  content: "\f09a";
+}
+.icon-unlock:before {
+  content: "\f09c";
+}
+.icon-credit-card:before {
+  content: "\f09d";
+}
+.icon-dollar:before {
+  content: "\f155";
+}
+.icon-usd:before {
+  content: "\f155";
+}
+.icon-instagram:before {
+  content: "\f16d";
+}
+.icon-paw:before {
+  content: "\f1b0";
+}
+.icon-wifi:before {
+  content: "\f1eb";
+}
+.icon-cc-visa:before {
+  content: "\f1f0";
+}
+.icon-cc-mastercard:before {
+  content: "\f1f1";
+}
+.icon-whatsapp:before {
+  content: "\f232";
+}
+.icon-television:before {
+  content: "\f26c";
+}
+.icon-tv:before {
+  content: "\f26c";
+}
+.icon-snowflake-o:before {
+  content: "\f2dc";
+}
