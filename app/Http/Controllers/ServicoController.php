@@ -46,7 +46,7 @@ class ServicoController extends Controller
         'descricao'=> $request->descricao,
         'status'=>'ativo']);
 
-        return view('servico/servico_add');
+        return view('servico/servico');
     }
 
     /**
@@ -69,8 +69,8 @@ class ServicoController extends Controller
      */
     public function edit($id)
     {
-        // $servico = Servico::findOrFail($id);
-        // return view('/servico/servico_edit',['servico'=>$servico]);
+        $servico = Servico::findOrFail($id);
+        return view('/servico/servico_edit',['servico'=>$servico]);
     }
 
     /**
@@ -82,9 +82,9 @@ class ServicoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $servico = Servico::findOrFail($id);
-        // $servico->update($request->all());
-        // return redirect('/servico');
+        $servico = Servico::findOrFail($id);
+        $servico->update($request->all());
+        return redirect('/servico');
     }
 
     /**
