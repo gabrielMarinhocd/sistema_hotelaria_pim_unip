@@ -1,21 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Servico;
+use App\Models\Hospede;
 
 use Illuminate\Http\Request;
 
-class ServicoController extends Controller
+class HospedeController extends Controller
 {
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index() {
 
-        $servicos = Servico::all();
-       return view('servico/servico',['servicos'=>$servicos]);
+       $hospedes = Hospede::all();
+       return view('hospede/hospede',['hospedes'=>$hospedes]);
 
     }
 
@@ -26,7 +26,7 @@ class ServicoController extends Controller
      */
     public function create()
     {
-     return view('servico/servico_add');
+      return view('hospede/hospede_add');
     }
 
     /**
@@ -37,17 +37,22 @@ class ServicoController extends Controller
      */
     public function store(Request $request)
     {
-    //    dd($request);
-       // servico::create($request->all());
+       // dd($request);
+       Hospede::create([
+            'nome'=>$request->nome,
+            'cpf'=> $request->cpf,
+            'email'=> $request->email,
+            'senha'=> $request->senha,
+            'celular'=> $request->celular,
+            'endereco'=> $request->endereco,
+            'cep'=> $request->cep,
+            'telefone'=> $request->telefone,
+            'status'=>'ativo',
+         ]);
 
-        Servico::create(['categoria'=>$request->categoria,
-        'nome'=> $request->nome,
-        'preco'=> $request->preco,
-        'descricao'=> $request->descricao,
-        'status'=>'ativo']);
 
-        $servicos = Servico::all();
-        return view('servico/servico',['servicos'=>$servicos]);
+        $hospedes = Hospede::all();
+        return view('hospede/hospede',['hospedes'=>$hospedes]);
     }
 
     /**
@@ -58,8 +63,8 @@ class ServicoController extends Controller
      */
     public function show($id)
     {
-        $servico = Servico::findOrFail($id);
-        return view('servico/servico_show',['servico'=>$servico]);
+        $hospede = Hospede::findOrFail($id);
+         return view('hospede/hospede_show',['hospede'=>$hospede]);
     }
 
     /**
@@ -70,8 +75,8 @@ class ServicoController extends Controller
      */
     public function edit($id)
     {
-        $servico = Servico::findOrFail($id);
-        return view('/servico/servico_edit',['servico'=>$servico]);
+        $hospede = Hospede::findOrFail($id);
+        return view('/hospede/hospede_edit',['hospede'=>$hospede]);
     }
 
     /**
@@ -83,9 +88,9 @@ class ServicoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $servico = Servico::findOrFail($id);
-        $servico->update($request->all());
-        return redirect('/servico');
+        // $hospede = Hospede::findOrFail($id);
+        // $hospede->update($request->all());
+        // return redirect('/hospede');
     }
 
     /**
@@ -96,7 +101,7 @@ class ServicoController extends Controller
      */
     public function destroy($id)
     {
-       servico::destroy($id);
-        return redirect()->route('servico');
+        Hospede::destroy($id);
+        return redirect()->route('hospede');
     }
 }

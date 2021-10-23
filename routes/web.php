@@ -5,6 +5,7 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\QuartoController;
 use App\Http\Controllers\ServicoController;
+use App\Http\Controllers\HospedeController;
 
 /*Rotas Principais do Usuário*/
 Route::get('/', function () {

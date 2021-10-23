@@ -13,13 +13,10 @@ initial-scale=1.0">
 
   <h2>perfil</h2>
   <hr>
-  {{$quarto->id}}
-  {{$quarto->andar}} <br>
-  {{$quarto->camas}} <br>
-  {{$quarto->tv}} <br>
-  {{$quarto->descricao}}<br>
-  {{$quarto->img}}<br>
-  {{$quarto->status}}
+  {{$perfil->id}} <br>
+  {{$perfil->nome}} <br>
+  {{$perfil->descricao}} <br>
+  {{$perfil->status}} <br>
 
 </body>
 
