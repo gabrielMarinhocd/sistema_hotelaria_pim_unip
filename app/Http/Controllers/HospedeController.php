@@ -88,9 +88,9 @@ class HospedeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $hospede = Hospede::findOrFail($id);
-        // $hospede->update($request->all());
-        // return redirect('/hospede');
+        $hospede = Hospede::findOrFail($id);
+        $hospede->update($request->all());
+        return redirect('/hospede');
     }
 
     /**
