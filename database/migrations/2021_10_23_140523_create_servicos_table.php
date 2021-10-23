@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateQuartosTable extends Migration
+class CreateServicosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,12 @@ class CreateQuartosTable extends Migration
      */
     public function up()
     {
-        Schema::create('quartos', function (Blueprint $table) {
+        Schema::create('servicos', function (Blueprint $table) {
             $table->id();
-            $table->String('numero');
-            $table->String('andar');
-            $table->integer('camas');
-            $table->integer('tv');
-            $table->integer('arcondicionado');
-            $table->String('descricao');
-            $table->String('img');
+            $table->String('categoria');
+            $table->String('nome');
+            $table->Double('preco');
+            $table->String('descriacao');
             $table->String('status');
             $table->timestamps();
         });
@@ -34,6 +31,6 @@ class CreateQuartosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('quartos');
+        Schema::dropIfExists('servicos');
     }
 }
