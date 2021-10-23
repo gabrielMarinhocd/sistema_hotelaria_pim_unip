@@ -18,7 +18,7 @@ class CreateServicosTable extends Migration
             $table->String('categoria');
             $table->String('nome');
             $table->Double('preco');
-            $table->String('descriacao');
+            $table->String('descricao');
             $table->String('status');
             $table->timestamps();
         });

@@ -9,11 +9,11 @@ class Servico extends Model
 {
     use HasFactory;
 
-    protected $fillatable = [
+    protected $fillable =[
         'categoria',
         'nome',
         'preco',
-        'descriacao',
+        'descricao',
         'status',
     ];
 }

@@ -17,7 +17,7 @@ initial-scale=1.0">
   {{$servico->categoria}} <br>
   {{$servico->nome}} <br>
   {{$servico->preco}} <br>
-  {{$servico->descriacao}} <br>
+  {{$servico->descricao}} <br>
   {{$servico->status}} <br>
   @endforeach
 

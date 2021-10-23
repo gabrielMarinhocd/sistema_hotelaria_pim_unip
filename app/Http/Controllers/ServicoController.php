@@ -37,14 +37,16 @@ class ServicoController extends Controller
      */
     public function store(Request $request)
     {
-       // dd($request);
-       //servico::create($request->all());
+    //    dd($request);
+       // servico::create($request->all());
 
-        // Servico::create(['nome'=>$request->nome,
-        // 'descricao'=> $request->descricao,
-        // 'status'=>'ativo']);
+        Servico::create(['categoria'=>$request->categoria,
+        'nome'=> $request->nome,
+        'preco'=> $request->preco,
+        'descricao'=> $request->descricao,
+        'status'=>'ativo']);
 
-        // return view('servico/servico_add');
+        return view('servico/servico_add');
     }
 
     /**
