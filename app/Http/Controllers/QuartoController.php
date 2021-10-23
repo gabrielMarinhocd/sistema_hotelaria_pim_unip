@@ -26,7 +26,7 @@ class QuartoController extends Controller
      */
     public function create()
     {
-    //  return view('quarto/quarto_add');
+     return view('quarto/quarto_add');
     }
 
     /**
@@ -37,14 +37,19 @@ class QuartoController extends Controller
      */
     public function store(Request $request)
     {
-       // dd($request);
-       //quarto::create($request->all());
-    //    Quarto::create(['nome'=>$request->nome,
-    //     'descricao'=> $request->descricao,
-    //     'status'=>'ativo']);
+        // dd($request);
+       Quarto::create([
+            'numero'=>$request->numero,
+            'andar'=>$request->andar,
+            'camas'=>$request->camas,
+            'tv'=>$request->tv,
+            'arcondicionado'=>$request->arcondicionado,
+            'descricao'=>$request->descricao,
+            'img'=>$request->img,
+            'status'=>'ativo'
+        ]);
 
-
-    //      return view('quarto/quarto_add');
+         return view('quarto/quarto');
     }
 
     /**
