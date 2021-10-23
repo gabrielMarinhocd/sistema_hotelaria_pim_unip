@@ -15,6 +15,7 @@ initial-scale=1.0">
   <h2>Quartos</h2>
   @foreach ($quartos as $quarto)
   {{$quarto->id}} <br>
+  {{$quarto->numero}} <br>
   {{$quarto->andar}} <br>
   {{$quarto->camas}} <br>
   {{$quarto->tv}} <br>

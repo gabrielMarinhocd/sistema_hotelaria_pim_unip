@@ -43,8 +43,7 @@ class PerfilController extends Controller
         'descricao'=> $request->descricao,
         'status'=>'ativo']);
 
-
-         return view('perfil/perfil_add');
+        return view('perfil/perfil_add');
     }
 
     /**

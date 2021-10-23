@@ -6,20 +6,17 @@
   <meta name="viewport" content="width=device-width,
 initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>perfil View</title>
+  <title>quarto View</title>
 </head>
 
 <body>
 
-  <h2>perfil</h2>
+  <h2>quarto</h2>
   <hr>
-  {{$quarto->id}}
-  {{$quarto->andar}} <br>
-  {{$quarto->camas}} <br>
-  {{$quarto->tv}} <br>
-  {{$quarto->descricao}}<br>
-  {{$quarto->img}}<br>
-  {{$quarto->status}}
+  <p> {{$quarto->id}} </p>
+  <p>{{$quarto->nome}} </p>
+  <p>{{$quarto->descricao}}</p>
+  <p>{{$quarto->status}}</p>
 
 </body>
 

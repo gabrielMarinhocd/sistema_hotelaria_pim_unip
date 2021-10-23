@@ -14,7 +14,7 @@ class QuartoController extends Controller
      */
     public function index() {
 
-        $quartos = quarto::all();
+        $quartos = Quarto::all();
        return view('quarto/quarto',['quartos'=>$quartos]);
 
     }
@@ -38,8 +38,7 @@ class QuartoController extends Controller
     public function store(Request $request)
     {
         // dd($request);
-       Quarto::create([
-            'numero'=>$request->numero,
+       Quarto::create(['numero'=>$request->numero,
             'andar'=>$request->andar,
             'camas'=>$request->camas,
             'tv'=>$request->tv,
@@ -49,7 +48,9 @@ class QuartoController extends Controller
             'status'=>'ativo'
         ]);
 
-         return view('quarto/quarto');
+        $quartos = Quarto::all();
+        return view('quarto/quarto',['quartos'=>$quartos]);
+
     }
 
     /**
@@ -60,8 +61,8 @@ class QuartoController extends Controller
      */
     public function show($id)
     {
-        // $quarto =Quarto::findOrFail($id);
-        // return view('quarto/quarto_show',['quarto'=>$quarto]);
+        $quarto = Quarto::findOrFail($id);
+        return view('quarto/quarto_show',['quarto'=>$quarto]);
     }
 
     /**
@@ -72,7 +73,7 @@ class QuartoController extends Controller
      */
     public function edit($id)
     {
-        $quarto = quarto::findOrFail($id);
+        $quarto = Quarto::findOrFail($id);
         return view('/quarto/quarto_edit',['quarto'=>$quarto]);
     }
 
@@ -85,9 +86,9 @@ class QuartoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $quarto = quarto::findOrFail($id);
-        // $quarto->update($request->all());
-        // return redirect('/quarto');
+        $quarto = Quarto::findOrFail($id);
+        $quarto->update($request->all());
+        return redirect('/quarto');
     }
 
     /**
