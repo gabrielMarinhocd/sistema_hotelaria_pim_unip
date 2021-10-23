@@ -93,7 +93,7 @@ class PerfilController extends Controller
      */
     public function destroy($id)
     {
-    //    Perfil::destroy($id);
-    //     return redirect()->route('perfil');
+       Perfil::destroy($id);
+        return redirect()->route('perfil');
     }
 }

@@ -88,3 +88,5 @@ Route::get('/perfil/show/{id}', [PerfilController::class, 'show'])->name('perfil
 Route::get('/perfil/edit/{id}', [PerfilController::class, 'edit'])->name('perfil_edit');
 
 Route::post('/perfil_update/{id}', [PerfilController::class,'update'])->name('perfil_update');
+
+Route::get('/perfil/delete/{id}', [PerfilController::class,'destroy'])->name('perfil_delete');
