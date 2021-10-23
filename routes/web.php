@@ -4,17 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\QuartoController;
+use App\Http\Controllers\ServicoController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 /*Rotas Principais do Usuário*/
 Route::get('/', function () {
     return view('huniphotel/home');
@@ -31,8 +22,6 @@ Route::get('/about', function () {
 Route::get('/reserves', function () {
     return view('huniphotel/reserves');
 })-> name('reserves');
-
-/*Rotas dos Quartos*/
 
 /*Rotas das páginas de quartos*/
 
@@ -107,3 +96,19 @@ Route::get('/quarto/edit/{id}', [QuartoController::class, 'edit'])->name('quarto
 Route::post('/quarto_update/{id}', [QuartoController::class,'update'])->name('quarto_update');
 
 Route::get('/quarto/delete/{id}', [QuartoController::class,'destroy'])->name('quarto_delete');
+
+//Serviços
+
+Route::get('/servico', [ServicoController::class,'index'])->name('servico');
+
+Route::get('/servico/create', [ServicoController::class,'create'])->name('servico_create');
+
+Route::post('/servico/store', [ServicoController::class, 'store'])->name('servico_store');
+
+Route::get('/servico/show/{id}', [ServicoController::class, 'show'])->name('servico_show');
+
+Route::get('/servico/edit/{id}', [ServicoController::class, 'edit'])->name('servico_edit');
+
+Route::post('/servico_update/{id}', [ServicoController::class,'update'])->name('servico_update');
+
+Route::get('/servico/delete/{id}', [ServicoController::class,'destroy'])->name('servico_delete');
