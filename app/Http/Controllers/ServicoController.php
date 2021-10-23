@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Servico;
 
 use Illuminate\Http\Request;
-use App\Models\Quarto;
 
-
-class QuartoController extends Controller
+class ServicoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,8 @@ class QuartoController extends Controller
      */
     public function index() {
 
-        $quartos = Quarto::all();
-       return view('quarto/quarto',['quartos'=>$quartos]);
+        $servicos = Servico::all();
+       return view('servico/servico',['servicos'=>$servicos]);
 
     }
 
@@ -27,7 +26,7 @@ class QuartoController extends Controller
      */
     public function create()
     {
-     return view('quarto/quarto_add');
+     return view('servico/servico_add');
     }
 
     /**
@@ -38,20 +37,14 @@ class QuartoController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
-       Quarto::create(['numero'=>$request->numero,
-            'andar'=>$request->andar,
-            'camas'=>$request->camas,
-            'tv'=>$request->tv,
-            'arcondicionado'=>$request->arcondicionado,
-            'descricao'=>$request->descricao,
-            'img'=>$request->img,
-            'status'=>'ativo'
-        ]);
+       // dd($request);
+       //servico::create($request->all());
 
-        $quartos = Quarto::all();
-        return view('quarto/quarto',['quartos'=>$quartos]);
+        // Servico::create(['nome'=>$request->nome,
+        // 'descricao'=> $request->descricao,
+        // 'status'=>'ativo']);
 
+        // return view('servico/servico_add');
     }
 
     /**
@@ -62,8 +55,8 @@ class QuartoController extends Controller
      */
     public function show($id)
     {
-        $quarto = Quarto::findOrFail($id);
-        return view('quarto/quarto_show',['quarto'=>$quarto]);
+        $servico = Servico::findOrFail($id);
+        return view('servico/servico_show',['servico'=>$servico]);
     }
 
     /**
@@ -74,8 +67,8 @@ class QuartoController extends Controller
      */
     public function edit($id)
     {
-        $quarto = Quarto::findOrFail($id);
-        return view('/quarto/quarto_edit',['quarto'=>$quarto]);
+        // $servico = Servico::findOrFail($id);
+        // return view('/servico/servico_edit',['servico'=>$servico]);
     }
 
     /**
@@ -87,9 +80,9 @@ class QuartoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $quarto = Quarto::findOrFail($id);
-        $quarto->update($request->all());
-        return redirect('/quarto');
+        // $servico = Servico::findOrFail($id);
+        // $servico->update($request->all());
+        // return redirect('/servico');
     }
 
     /**
@@ -100,7 +93,7 @@ class QuartoController extends Controller
      */
     public function destroy($id)
     {
-        Quarto::destroy($id);
-        return redirect()->route('quarto');
+       servico::destroy($id);
+        return redirect()->route('servico');
     }
 }
