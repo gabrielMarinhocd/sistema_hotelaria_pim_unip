@@ -112,3 +112,19 @@ Route::get('/servico/edit/{id}', [ServicoController::class, 'edit'])->name('serv
 Route::post('/servico_update/{id}', [ServicoController::class,'update'])->name('servico_update');
 
 Route::get('/servico/delete/{id}', [ServicoController::class,'destroy'])->name('servico_delete');
+
+//Hospede
+
+Route::get('/hospede', [HospedeController::class,'index'])->name('hospede');
+
+Route::get('/hospede/create', [HospedeController::class,'create'])->name('hospede_create');
+
+Route::post('/hospede/store', [HospedeController::class, 'store'])->name('hospede_store');
+
+Route::get('/hospede/show/{id}', [HospedeController::class, 'show'])->name('hospede_show');
+
+Route::get('/hospede/edit/{id}', [HospedeController::class, 'edit'])->name('hospede_edit');
+
+Route::post('/hospede_update/{id}', [HospedeController::class,'update'])->name('hospede_update');
+
+Route::get('/hospede/delete/{id}', [HospedeController::class,'destroy'])->name('hospede_delete');
