@@ -15,12 +15,12 @@ class CreateReservasTable extends Migration
     {
         Schema::create('reservas', function (Blueprint $table) {
             $table->id();
-            $table->String(' data');
-            $table->String('valor');
+            $table->date('data');
+            $table->Double('valor');
             $table->unsignedBigInteger('id_funcionario');
             $table->foreign('id_funcionario')->references('id')->on('funcionarios');
-            $table->String('registro_saida');
-            $table->String('registro_entrada');
+            $table->date('registro_saida');
+            $table->date('registro_entrada');
             $table->unsignedBigInteger('id_hospede');
             $table->foreign('id_hospede')->references('id')->on('hospedes');
             $table->String('status');
