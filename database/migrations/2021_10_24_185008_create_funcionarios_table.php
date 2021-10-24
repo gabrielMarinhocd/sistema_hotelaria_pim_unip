@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateServicosTable extends Migration
+class CreateFuncionariosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateServicosTable extends Migration
      */
     public function up()
     {
-        Schema::create('servicos', function (Blueprint $table) {
+        Schema::create('funcionarios', function (Blueprint $table) {
             $table->id();
-            $table->String('categoria');
-            $table->String('nome');
-            $table->Double('preco');
-            $table->String('descricao');
+            $table->String('login');
+            $table->String('senha');
+            $table->unsignedBigInteger('id_perfil');
+            $table->foreign('id_perfil')->references('id')->on('perfils');
             $table->String('status');
             $table->timestamps();
         });
@@ -31,6 +31,6 @@ class CreateServicosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('servicos');
+        Schema::dropIfExists('funcionarios');
     }
 }
