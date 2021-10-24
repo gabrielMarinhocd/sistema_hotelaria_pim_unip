@@ -10,6 +10,10 @@ class Item_reserva extends Model
     use HasFactory;
 
     protected $fillable = [
-        ''
+        'entrada',
+        'saida',
+        'forma_pagamento',
+        'id_reserva',
+        'id_quarto'
     ];
 }
