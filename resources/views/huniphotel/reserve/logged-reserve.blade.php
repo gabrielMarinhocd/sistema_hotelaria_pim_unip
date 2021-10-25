@@ -12,9 +12,6 @@
   <link rel="stylesheet" href="{{url(mix('huniphotel/style.css'))}}">
   <title>Hunip Hotel Reservas</title>
   <style>
-    body{
-      font-family:'Poppins';
-    }
     #navigation-bar{
       width: 100%;
       z-index: 100;
@@ -49,13 +46,44 @@
     
   </nav>
   <main>
-    <h2 style="text-align:center;padding-top:5rem;font-weight:800;">RESERVA</h2>
+    <h2 style="text-align:center;padding-top:5rem;font-family:'Poppins';font-weight:800;">RESERVA</h2>
     <hr>
-    <p style="text-align:center">Para fazer a reserva é preciso fazer login</p>
-    <div class="botao" style="display:flex;justify-content:center;width:auto;">
-      <a href="{{route('login-reserve')}}" class="btn btn-primary button-reserve" style="width: 30%; margin-top: 1rem;font-family:'Poppins';">Login</a>
+    <div class="container reserva-input">
+      <form action="">
+        <fieldset style="display:flex;flex-direction:column;align-items:center">
+          <label for="date-input">Data</label>
+          <input type="date" name="date-input" id="date-input">
+          <label for="number-peoples-input">Numero de pessoas</label>
+          <input type="number" name="number-peoples-input" id="number-peoples-input">
+          <label for="payment-type-input">Tipo de pagamento</label>
+          <div id="payment-type-input">
+            <input type="checkbox" name="visa-payment" id="visa-payment">Visa
+            <input type="checkbox" name="" id="">MasterCard
+            <input type="checkbox" name="" id="">Boleto
+            <input type="checkbox" name="" id="">PIX
+          </div>
+          <button type="submit" style="margin-top:1rem;">Reservar</button>
+        </fieldset>
+        <a href="" data-bs-toggle="modal" data-bs-target="#reserveModal">Reserva Feita.</a>
+      </form>
     </div>
-    
+    <!--Modal-->
+    <div class="modal fade" id="reserveModal" tabindex="-1" aria-labelledby="reserveModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ReserveModalLabel">Reservas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Sua reserva foi efetuada com sucesso !!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <script src="{{url(mix('huniphotel/bootstrap.js'))}}"></script>
 </body>

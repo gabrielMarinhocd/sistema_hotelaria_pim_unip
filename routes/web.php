@@ -56,6 +56,18 @@ Route::get('/selected-reserve', function () {
     return view('huniphotel/reserve/selected-room-reserve');
 })-> name('selected-reserve');
 
+Route::get('/login-reserve', function() {
+    return view('huniphotel/reserve/login-reserve');
+})-> name('login-reserve');
+
+Route::get('/registration-reserve', function(){
+    return view('huniphotel/reserve/registration-reserve');
+})->name('registration-reserve');
+
+Route::get('/logged-reserve', function(){
+    return view('huniphotel/reserve/logged-reserve');
+})->name('logged-reserve');
+
 //Menu
 
 Route::get('/menu', [MenuController::class,'index'])->name('menus');

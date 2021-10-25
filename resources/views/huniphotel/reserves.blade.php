@@ -46,9 +46,11 @@
     
   </nav>
   <main>
-    <h2 style="text-align:center;padding-top:5rem;font-family:'Poppins';font-weight:800;">Escolha um quarto primeiro</h2>
+    <h2 style="text-align:center;padding-top:5rem;font-family:'Poppins';font-weight:800;">RESERVA</h2>
+    <hr>
+    <p style="text-align:center;">Escolha um quarto primeiro</p>
     <div class="botao" style="display:flex;justify-content:center;width:auto;">
-      <a href="{{route('rooms')}}" class="btn btn-primary button-reserve" style="width: 30%; margin-top: 1rem;font-family:'Poppins';">Quartos</a>
+      <a href="{{route('rooms')}}" class="btn btn-primary button-reserve" style="width: 20%;font-family:'Poppins';">Quartos</a>
     </div>
     
   </main>
