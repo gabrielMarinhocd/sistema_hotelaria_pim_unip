@@ -92,7 +92,7 @@
         <p>
           Aproveite tudo o que a Avenida Paulista pode oferecer em um dos hotéis mais bem avaliados de São Paulo, o Hunip Hotel.
         </p>
-        <a href="" class="btn btn-warning button-reserve" style="width: 100%; margin-top: 2rem;">Reserve-já</a>
+        <a href="{{route('selected-reserve')}}" class="btn btn-warning button-reserve" style="width: 100%; margin-top: 2rem;">Reserve-já</a>
       </div>
     </section>
   </main>

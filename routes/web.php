@@ -50,6 +50,12 @@ Route::get('/room/standart-twin-solteiro', function () {
     return view('huniphotel/room/standart-twin-solteiro');
 })-> name('standart-twin-solteiro');
 
+/* Rota da página de reserva */
+
+Route::get('/selected-reserve', function () {
+    return view('huniphotel/reserve/selected-room-reserve');
+})-> name('selected-reserve');
+
 //Menu
 
 Route::get('/menu', [MenuController::class,'index'])->name('menus');
