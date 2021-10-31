@@ -25,4 +25,18 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function admin()
+    {
+        return 'Yeahhh autenticado como admin';
+    }
+
+    public function atendente(){
+        return 'Yeahh autenticado como atendente';
+    }
+
+    public function hospede(){
+        return 'Yeah autenticado como hospede';
+    }
+
 }

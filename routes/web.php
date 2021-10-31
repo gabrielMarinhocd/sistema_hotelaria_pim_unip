@@ -6,6 +6,7 @@ use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\QuartoController;
 use App\Http\Controllers\ServicoController;
 use App\Http\Controllers\HospedeController;
+use App\Http\Controllers\HomeController;
 
 /*Rotas Principais do Usuário*/
 Route::get('/', function () {
@@ -150,4 +151,8 @@ Route::get('/hospede/delete/{id}', [HospedeController::class,'destroy'])->name('
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::middleware('admin')->group(function(){
+    Route::get('/admin', [HomeController::class, 'admin'])->name('admin');
+});
