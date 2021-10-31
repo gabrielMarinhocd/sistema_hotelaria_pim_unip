@@ -13,4 +13,13 @@ class Reserva_servico extends Model
         'id_reserva',
         'id_servico',
     ];
+
+    public function reservas(){
+        return $this->belongsTo('App\Models\Reserva');
+    }
+
+    public function servicos(){
+        return $this->hasMany('App\Models\Servico');
+    }
+
 }

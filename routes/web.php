@@ -147,3 +147,7 @@ Route::get('/hospede/edit/{id}', [HospedeController::class, 'edit'])->name('hosp
 Route::post('/hospede_update/{id}', [HospedeController::class,'update'])->name('hospede_update');
 
 Route::get('/hospede/delete/{id}', [HospedeController::class,'destroy'])->name('hospede_delete');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
