@@ -17,12 +17,12 @@ class CreateHospedesTable extends Migration
             $table->id();
             $table->String('nome');
             $table->String('cpf');
-            $table->String('email');
-            $table->String('senha');
             $table->String('celular');
             $table->String('endereco');
             $table->String('cep');
             $table->String('telefone');
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
             $table->String('status');
             $table->timestamps();
         });

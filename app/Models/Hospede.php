@@ -12,12 +12,11 @@ class Hospede extends Model
     protected $fillable = [
         'nome',
         'cpf',
-        'email',
-        'senha',
         'celular',
         'endereco',
         'cep',
         'telefone',
+        'id_user',
         'status',
     ];
 }

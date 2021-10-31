@@ -15,10 +15,10 @@ class CreateFuncionariosTable extends Migration
     {
         Schema::create('funcionarios', function (Blueprint $table) {
             $table->id();
-            $table->String('login');
-            $table->String('senha');
             $table->unsignedBigInteger('id_perfil');
             $table->foreign('id_perfil')->references('id')->on('perfils');
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
             $table->String('status');
             $table->timestamps();
         });
