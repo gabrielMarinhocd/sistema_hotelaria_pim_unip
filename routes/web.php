@@ -149,10 +149,20 @@ Route::post('/hospede_update/{id}', [HospedeController::class,'update'])->name('
 
 Route::get('/hospede/delete/{id}', [HospedeController::class,'destroy'])->name('hospede_delete');
 
+//Parte de Autenticação
+
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::middleware('admin')->group(function(){
     Route::get('/admin', [HomeController::class, 'admin'])->name('admin');
+});
+
+Route::middleware('atendente')->group(function(){
+    Route::get('/atendente', [HomeController::class,'atendente'])->name('atendente');
+});
+
+Route::middleware('hospede')->group(function(){
+    Route::get('/hospede', [HomeController::class, 'hospede'])->name('hospede');
 });
