@@ -61,6 +61,13 @@
                             </div>
                         </div>
 
+                        <input id="nome" type="text" name="nome" placeholder="nome"><br/>
+                        <input id="cpf" type="text" name="cpf" placeholder="cpf"><br/>
+                        <input id="celular" type="text" name="celular" placeholder="celular"><br/>
+                        <input id="endereco" type="text" name="endereco" placeholder="endereco"><br/>
+                        <input id="cep" type="text" name="cep" placeholder="cep"><br/>
+                        <input id="telefone" type="text" name="telefone" placeholder="telefone"><br/>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

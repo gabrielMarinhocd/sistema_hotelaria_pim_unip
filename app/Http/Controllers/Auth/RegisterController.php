@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Models\Hospede;
 
 class RegisterController extends Controller
 {
@@ -64,10 +65,27 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        Hospede::create([
+            'nome'=>$data['nome'],
+            'cpf'=> $data['cpf'],
+            'celular'=> $data['celular'],
+            'endereco'=> $data['endereco'],
+            'cep'=> $data['cep'],
+            'telefone'=> $data['telefone'],
+            'id_user' => $user->id,
+            'status'=>'ativo',
+         ]);
+
+
+
+        return  $user;
+
+
     }
 }
