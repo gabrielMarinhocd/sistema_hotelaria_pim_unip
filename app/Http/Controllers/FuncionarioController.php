@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Funcionario;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class FuncionarioController extends Controller
 {
@@ -26,7 +28,7 @@ class FuncionarioController extends Controller
      */
     public function create()
     {
-      return view('Auth/register');
+      return view('funcionario/funcionario_add');
     }
 
     /**
@@ -37,22 +39,25 @@ class FuncionarioController extends Controller
      */
     public function store(Request $request)
     {
-       // dd($request);
-    //    Funcionario::create([
-    //         'nome'=>$request->nome,
-    //         'cpf'=> $request->cpf,
-    //         'email'=> $request->email,
-    //         'senha'=> $request->senha,
-    //         'celular'=> $request->celular,
-    //         'endereco'=> $request->endereco,
-    //         'cep'=> $request->cep,
-    //         'telefone'=> $request->telefone,
-    //         'status'=>'ativo',
-    //      ]);
+
+         $user = User::create([
+            'name'=>$request->nome,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            $request->perfil => true,
+            'hospede'=> false,
+            'status'=>'ativo',
+        ]);
+
+         Funcionario::create([
+                 'nome'=>$request->nome,
+                 'cpf'=> $request->cpf,
+                 'id_user' => $user->id,
+             ]);
 
 
-    //    $funcionarios = Funcionario::all();
-    //     return view('funcionario/funcionario',['funcionarios'=>$funcionarios]);
+           $funcionarios = Funcionario::all();
+            return view('funcionario/funcionario',['funcionarios'=>$funcionarios]);
     }
 
     /**

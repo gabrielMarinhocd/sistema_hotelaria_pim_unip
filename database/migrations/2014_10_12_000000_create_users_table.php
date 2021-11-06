@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->boolean('admin')->default(0);
             $table->boolean('atendente')->default(0);
             $table->boolean('hospede')->default(1);
+            $table->string('status')->default('ativo');
             $table->timestamps();
         });
     }
