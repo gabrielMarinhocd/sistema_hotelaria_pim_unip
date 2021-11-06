@@ -16,7 +16,7 @@ class CreateHospedesTable extends Migration
         Schema::create('hospedes', function (Blueprint $table) {
             $table->id();
             $table->String('nome');
-            $table->String('cpf');
+            $table->String('cpf')->unique();
             $table->String('celular');
             $table->String('endereco');
             $table->String('cep');

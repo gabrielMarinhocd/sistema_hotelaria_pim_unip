@@ -15,6 +15,7 @@ class CreateFuncionariosTable extends Migration
     {
         Schema::create('funcionarios', function (Blueprint $table) {
             $table->id();
+            $table->String('cpf')->unique();
             $table->unsignedBigInteger('id_perfil');
             $table->foreign('id_perfil')->references('id')->on('perfils');
             $table->unsignedBigInteger('id_user');

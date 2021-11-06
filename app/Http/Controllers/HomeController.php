@@ -29,6 +29,7 @@ class HomeController extends Controller
     public function admin()
     {
         return 'Yeahhh autenticado como admin';
+        return route('menu');
     }
 
     public function atendente(){
