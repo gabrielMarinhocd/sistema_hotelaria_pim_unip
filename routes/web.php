@@ -6,6 +6,7 @@ use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\QuartoController;
 use App\Http\Controllers\ServicoController;
 use App\Http\Controllers\HospedeController;
+use App\Http\Controllers\FuncionarioController;
 use App\Http\Controllers\HomeController;
 
 /*Rotas Principais do Usuário*/
@@ -148,6 +149,22 @@ Route::get('/hospede/edit/{id}', [HospedeController::class, 'edit'])->name('hosp
 Route::post('/hospede_update/{id}', [HospedeController::class,'update'])->name('hospede_update');
 
 Route::get('/hospede/delete/{id}', [HospedeController::class,'destroy'])->name('hospede_delete');
+
+//Funcionario
+
+Route::get('/funcionario', [FuncionarioController::class,'index'])->name('funcionario');
+
+Route::get('/funcionario/create', [FuncionarioController::class,'create'])->name('funcionario_create');
+
+Route::post('/funcionario/store', [FuncionarioController::class, 'store'])->name('funcionario_store');
+
+Route::get('/funcionario/show/{id}', [FuncionarioController::class, 'show'])->name('funcionario_show');
+
+Route::get('/funcionario/edit/{id}', [FuncionarioController::class, 'edit'])->name('funcionario_edit');
+
+Route::post('/funcionario_update/{id}', [FuncionarioController::class,'update'])->name('funcionario_update');
+
+Route::get('/funcionario/delete/{id}', [FuncionarioController::class,'destroy'])->name('funcionario_delete');
 
 //Parte de Autenticação
 

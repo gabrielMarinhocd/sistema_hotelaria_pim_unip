@@ -1,21 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Hospede;
 
 use Illuminate\Http\Request;
+use App\Models\Funcionario;
 
-class HospedeController extends Controller
+class FuncionarioController extends Controller
 {
-     /**
+       /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index() {
 
-       $hospedes = Hospede::all();
-       return view('hospede/hospede',['hospedes'=>$hospedes]);
+      $funcionarios = Funcionario::all();
+       return view('funcionario/funcionario',['funcionarios'=>$funcionarios]);
 
     }
 
@@ -38,7 +38,7 @@ class HospedeController extends Controller
     public function store(Request $request)
     {
        // dd($request);
-    //    Hospede::create([
+    //    Funcionario::create([
     //         'nome'=>$request->nome,
     //         'cpf'=> $request->cpf,
     //         'email'=> $request->email,
@@ -51,8 +51,8 @@ class HospedeController extends Controller
     //      ]);
 
 
-    //     $hospedes = Hospede::all();
-    //     return view('hospede/hospede',['hospedes'=>$hospedes]);
+    //    $funcionarios = Funcionario::all();
+    //     return view('funcionario/funcionario',['funcionarios'=>$funcionarios]);
     }
 
     /**
@@ -63,8 +63,8 @@ class HospedeController extends Controller
      */
     public function show($id)
     {
-        $hospede = Hospede::findOrFail($id);
-         return view('hospede/hospede_show',['hospede'=>$hospede]);
+       $funcionario = Funcionario::findOrFail($id);
+         return view('funcionario/funcionario_show',['funcionario'=>$funcionario]);
     }
 
     /**
@@ -75,8 +75,8 @@ class HospedeController extends Controller
      */
     public function edit($id)
     {
-        $hospede = Hospede::findOrFail($id);
-        return view('/hospede/hospede_edit',['hospede'=>$hospede]);
+    //    $funcionario = Funcionario::findOrFail($id);
+    //     return view('/funcionario/funcionario_edit',['funcionario'=>$funcionario]);
     }
 
     /**
@@ -88,9 +88,9 @@ class HospedeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $hospede = Hospede::findOrFail($id);
-        $hospede->update($request->all());
-        return redirect('/hospede');
+    //    $funcionario = Funcionario::findOrFail($id);
+    //    $funcionario->update($request->all());
+    //     return redirect('/funcionario');
     }
 
     /**
@@ -101,7 +101,7 @@ class HospedeController extends Controller
      */
     public function destroy($id)
     {
-        Hospede::destroy($id);
-        return redirect()->route('hospede');
+        Funcionario::destroy($id);
+        return redirect()->route('funcionario');
     }
 }

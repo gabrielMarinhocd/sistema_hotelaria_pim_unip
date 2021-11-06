@@ -17,8 +17,6 @@ initial-scale=1.0">
   {{$hospede->id}} <br>
   {{$hospede->nome}} <br>
   {{$hospede->cpf}} <br>
-  {{$hospede->email}}<br>
-  {{$hospede->senha}}<br>
   {{$hospede->celular}}<br>
   {{$hospede->endereco}}<br>
   {{$hospede->cep}}<br>

@@ -82,10 +82,7 @@ class RegisterController extends Controller
             'status'=>'ativo',
          ]);
 
-
-
         return  $user;
-
 
     }
 }
