@@ -68,8 +68,9 @@ class FuncionarioController extends Controller
      */
     public function show($id)
     {
-       $funcionario = Funcionario::findOrFail($id);
-         return view('funcionario/funcionario_show',['funcionario'=>$funcionario]);
+        $funcionario = Funcionario::findOrFail($id);
+        $user = User::findOrFail($funcionario->id_user);
+         return view('funcionario/funcionario_show',['funcionario'=>$funcionario],['user'=>$user]);
     }
 
     /**
