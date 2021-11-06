@@ -80,8 +80,9 @@ class FuncionarioController extends Controller
      */
     public function edit($id)
     {
-    //    $funcionario = Funcionario::findOrFail($id);
-    //     return view('/funcionario/funcionario_edit',['funcionario'=>$funcionario]);
+        $funcionario = Funcionario::findOrFail($id);
+        $user = User::findOrFail($funcionario->id_user);
+         return view('/funcionario/funcionario_edit',['funcionario'=>$funcionario],['user'=>$user]);
     }
 
     /**
@@ -93,9 +94,19 @@ class FuncionarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-    //    $funcionario = Funcionario::findOrFail($id);
-    //    $funcionario->update($request->all());
-    //     return redirect('/funcionario');
+       $funcionario = Funcionario::findOrFail($id);
+       $funcionario->update($request->all());
+
+       $user = User::findOrFail($funcionario->id_user);
+       $user->update([
+            'name'=>$request->nome,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            $request->perfil => true,
+            ]
+        );
+
+        return redirect('/funcionario');
     }
 
     /**

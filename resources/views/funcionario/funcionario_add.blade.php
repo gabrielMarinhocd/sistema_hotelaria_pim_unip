@@ -18,6 +18,7 @@ initial-scale=1.0">
     <input id="cpf" type="text" name="cpf" placeholder="cpf"><br/>
     <input id="email" type="text" name="email" placeholder="email"><br/>
     <input id="password" type="text" name="password" placeholder="password"><br/>
+    <input id="perfil" type="text" name="perfil" placeholder="perfil"><br/>
     <button type="submit">Inserir</button>
   </form>
 </body>
