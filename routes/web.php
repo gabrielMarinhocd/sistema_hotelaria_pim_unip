@@ -169,7 +169,7 @@ Route::get('/funcionario/delete/{id}', [FuncionarioController::class,'destroy'])
 
 //dependente
 
-Route::get('/dependente', [DependenteController::class,'index'])->name('dependente');
+Route::get('/dependente/{id}', [DependenteController::class,'index'])->name('dependente');
 
 Route::get('/dependente/create/{id}', [DependenteController::class,'create'])->name('dependente_create');
 

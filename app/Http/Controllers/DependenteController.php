@@ -13,10 +13,16 @@ class DependenteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
+    public function index(Request $request) {
 
-      $dependentes = Dependente::all();
-       return view('dependente/dependente',['dependentes'=>$dependentes]);
+        $dependentes = Dependente::all();
+        $hospede = Hospede::findOrFail($request->id);
+
+            return view('dependente/dependente',['dependentes'=>$dependentes],['hospede'=>$hospede]);
+
+            // $grouped = $dependentes->groupBy('id_hospede');
+            // $grouped->all();
+
 
     }
 
@@ -74,9 +80,8 @@ class DependenteController extends Controller
      */
     public function edit($id)
     {
-        // $dependente = Dependente::findOrFail($id);
-        // $user = User::findOrFail($dependente->id_user);
-        //  return view('/dependente/dependente_edit',['dependente'=>$dependente],['user'=>$user]);
+        $dependente = Dependente::findOrFail($id);
+         return view('/dependente/dependente_edit',['dependente'=>$dependente]);
     }
 
     /**
@@ -86,21 +91,15 @@ class DependenteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, $id)
     {
-    //    $dependente = Dependente::findOrFail($id);
-    //    $dependente->update($request->all());
+       $dependente = Dependente::findOrFail($id);
+       $dependente->update($request->all());
+       $hospede = Hospede::findOrFail($id);
+       $dependentes = Dependente::all();
 
-    //    $user = User::findOrFail($dependente->id_user);
-    //    $user->update([
-    //         'name'=>$request->nome,
-    //         'email' => $request->email,
-    //         'password' => Hash::make($request->password),
-    //         $request->perfil => true,
-    //         ]
-    //     );
-
-    //     return redirect('/dependente');
+       return view('dependente/dependente',['dependentes'=>$dependentes],['hospede'=>$hospede]);
     }
 
     /**
