@@ -68,8 +68,8 @@ class DependenteController extends Controller
     public function show($id)
     {
         $dependente = Dependente::findOrFail($id);
-        $user = User::findOrFail($dependente->id_user);
-         return view('dependente/dependente_show',['dependente'=>$dependente],['user'=>$user]);
+        $hospede = Hospede::findOrFail($dependente->id_hospede);
+         return view('dependente/dependente_show',['dependente'=>$dependente],['hospede'=>$hospede]);
     }
 
     /**
