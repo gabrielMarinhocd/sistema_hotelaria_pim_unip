@@ -16,7 +16,7 @@ class CreateDependentesTable extends Migration
         Schema::create('dependentes', function (Blueprint $table) {
             $table->id();
             $table->String('nome');
-            $table->String('cpf');
+            $table->String('cpf')->unique();
             $table->Integer('idade');
             $table->unsignedBigInteger('id_hospede');
             $table->foreign('id_hospede')->references('id')->on('hospedes');

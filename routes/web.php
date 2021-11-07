@@ -7,6 +7,7 @@ use App\Http\Controllers\QuartoController;
 use App\Http\Controllers\ServicoController;
 use App\Http\Controllers\HospedeController;
 use App\Http\Controllers\FuncionarioController;
+use App\Http\Controllers\DependenteController;
 use App\Http\Controllers\HomeController;
 
 /*Rotas Principais do Usuário*/
@@ -165,6 +166,22 @@ Route::get('/funcionario/edit/{id}', [FuncionarioController::class, 'edit'])->na
 Route::post('/funcionario_update/{id}', [FuncionarioController::class,'update'])->name('funcionario_update');
 
 Route::get('/funcionario/delete/{id}', [FuncionarioController::class,'destroy'])->name('funcionario_delete');
+
+//dependente
+
+Route::get('/dependente', [DependenteController::class,'index'])->name('dependente');
+
+Route::get('/dependente/create/{id}', [DependenteController::class,'create'])->name('dependente_create');
+
+Route::post('/dependente/store', [DependenteController::class, 'store'])->name('dependente_store');
+
+Route::get('/dependente/show/{id}', [DependenteController::class, 'show'])->name('dependente_show');
+
+Route::get('/dependente/edit/{id}', [DependenteController::class, 'edit'])->name('dependente_edit');
+
+Route::post('/dependente_update/{id}', [DependenteController::class,'update'])->name('dependente_update');
+
+Route::get('/dependente/delete/{id}', [DependenteController::class,'destroy'])->name('dependente_delete');
 
 //Parte de Autenticação
 
