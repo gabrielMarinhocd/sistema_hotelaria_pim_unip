@@ -12,7 +12,6 @@ class Reserva extends Model
     protected $fillable = [
         'data',
         'valor',
-        'id_funcionario',
         'registro_saida',
         'registro_entrada',
         'id_hospede',
