@@ -15,7 +15,7 @@ class Reserva_servico extends Model
     ];
 
     public function reservas(){
-        return $this->belongsTo('App\Models\Reserva');
+        return $this->belongsTo(Reserva::class);
     }
 
     public function servicos(){

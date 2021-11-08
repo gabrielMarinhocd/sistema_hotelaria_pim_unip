@@ -10,21 +10,15 @@ initial-scale=1.0">
 </head>
 
 <body>
-  <h1>reservas</h1>
+  <h1>reserva_servicos</h1>
 
-  <h2>reservas</h2>
-  @foreach ($reservas as $reserva)
-  {{$reserva->data}} <br>
-  {{$reserva->valor}} <br>
-  {{$reserva->registro_saida}} <br>
-  {{$reserva->registro_entrada}} <br>
-  {{$reserva->id_hospede}} <br>
-  {{$reserva->status}}
+  <h2>reserva_servicos</h2>
+  @foreach ($reserva_servicos as $reserva_servico)
+  {{$reserva_servico->id_reserva}} <br>
+  {{$reserva_servico->id_servico}} <br>
+
   @endforeach
 
 </body>
 
 </html>
-
-
-

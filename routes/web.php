@@ -9,6 +9,7 @@ use App\Http\Controllers\HospedeController;
 use App\Http\Controllers\FuncionarioController;
 use App\Http\Controllers\DependenteController;
 use App\Http\Controllers\ReservaController;
+use App\Http\Controllers\ReservaServicosController;
 use App\Http\Controllers\HomeController;
 
 /*Rotas Principais do Usuário*/
@@ -199,6 +200,22 @@ Route::get('/reserva/edit/{id}', [ReservaController::class, 'edit'])->name('rese
 Route::post('/reserva_update/{id}', [ReservaController::class,'update'])->name('reserva_update');
 
 Route::get('/reserva/delete/{id}', [ReservaController::class,'destroy'])->name('reserva_delete');
+
+//reserva_servico
+
+Route::get('/reserva_servico', [ReservaServicosController::class,'index'])->name('reserva_servico');
+
+Route::get('/reserva_servico/create', [ReservaServicosController::class,'create'])->name('reserva_servico_create');
+
+Route::post('/reserva_servico/store', [ReservaServicosController::class, 'store'])->name('reserva_servico_store');
+
+Route::get('/reserva_servico/show/{id}', [ReservaServicosController::class, 'show'])->name('reserva_servico_show');
+
+Route::get('/reserva_servico/edit/{id}', [ReservaServicosController::class, 'edit'])->name('reserva_servico_edit');
+
+Route::post('/reserva_servico_update/{id}', [ReservaServicosController::class,'update'])->name('reserva_servico_update');
+
+Route::get('/reserva_servico/delete/{id}', [ReservaServicosController::class,'destroy'])->name('reserva_servico_delete');
 
 //Parte de Autenticação
 
