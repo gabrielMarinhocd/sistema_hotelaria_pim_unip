@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
         'admin' => \App\Http\Middleware\AdminACL::class,
         'atendente' => \App\Http\Middleware\AtendenteACL::class,
         'hospede' => \App\Http\Middleware\HospedeACL::class,
+        'gerente' => \App\Http\Middleware\GerenteACL::class,
     ];
 }

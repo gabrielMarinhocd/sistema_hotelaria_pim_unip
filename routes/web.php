@@ -234,3 +234,7 @@ Route::middleware('atendente')->group(function(){
 Route::middleware('hospede')->group(function(){
     Route::get('/hospede', [HomeController::class, 'hospede'])->name('hospede');
 });
+
+Route::middleware('gerente')->group(function(){
+    Route::get('/gerente', [HomeController::class, 'gerente'])->name('gerente');
+});

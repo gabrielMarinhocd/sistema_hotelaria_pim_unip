@@ -40,4 +40,8 @@ class HomeController extends Controller
         return 'Yeah autenticado como hospede';
     }
 
+    public function gerente(){
+        return 'Yeah autenticado como gerente';
+    }
+
 }
