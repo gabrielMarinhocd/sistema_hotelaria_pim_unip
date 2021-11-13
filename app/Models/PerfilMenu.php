@@ -10,7 +10,7 @@ class PerfilMenu extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id_perfil',
-        'id_menu'
+        'perfil_id',
+        'menu_id'
     ];
 }

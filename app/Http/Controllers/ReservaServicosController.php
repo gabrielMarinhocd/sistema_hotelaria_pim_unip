@@ -39,9 +39,11 @@ class ReservaServicosController extends Controller
     public function store(Request $request)
     {
 
+
+
             $reserva_servicos = Reserva_servico::create([
-                    'id_reserva'=>$request->id_reserva,
-                    'id_servico'=> $request->id_servico,
+                    'reserva_id'=>$request->reserva_id,
+                    'servico_id'=> $request->servico_id,
                 ]);
 
 

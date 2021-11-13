@@ -45,7 +45,7 @@ class ReservaController extends Controller
                     'valor'=> $request->valor,
                     'registro_saida' => $request->registro_saida,
                     'registro_entrada'=> $request->registro_entrada,
-                    'id_hospede'=> $request->id_hospede,
+                    'hospede_id'=> $request->hospede_id,
                     'status'=> 'ativo',
                 ]);
 
@@ -55,8 +55,8 @@ class ReservaController extends Controller
                     'entrada'=>now(),
                     'saida'=> $request->saida,
                     'forma_pagamento' => $request->forma_pagamento,
-                    'id_reserva'=> $reservas->id,
-                    'id_quarto'=> $request->id_quarto,
+                    'reserva_id'=> $reservas->id,
+                    'quarto_id'=> $request->quarto_id,
                     'status'=> 'ativo',
                 ]);
 
@@ -76,7 +76,7 @@ class ReservaController extends Controller
     public function show($id)
     {
         $reserva = Reserva::findOrFail($id);
-        // $user = User::findOrFail($reserva->id_user);
+        // $user = User::findOrFail($reserva->user);
          return view('reserva/reserva_show',['reserva'=>$reserva],['user'=>$user]);
     }
 
@@ -89,7 +89,7 @@ class ReservaController extends Controller
     public function edit($id)
     {
         $reserva = Reserva::findOrFail($id);
-        // $user = User::findOrFail($reserva->id_user);
+        // $user = User::findOrFail($reserva->user);
          return view('/reserva/reserva_edit',['reserva'=>$reserva],['user'=>$user]);
     }
 
@@ -105,7 +105,7 @@ class ReservaController extends Controller
     //    $reserva = Reserva::findOrFail($id);
     //    $reserva->update($request->all());
 
-    //    $user = User::findOrFail($reserva->id_user);
+    //    $user = User::findOrFail($reserva->user);
     //    $user->update([
     //         'name'=>$request->nome,
     //         'email' => $request->email,

@@ -13,7 +13,7 @@ class Dependente extends Model
         'nome',
         'cpf',
         'idade',
-        'id_hospede',
+        'hospede_id',
         'status'
     ];
 

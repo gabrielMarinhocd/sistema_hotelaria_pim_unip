@@ -52,7 +52,7 @@ class FuncionarioController extends Controller
          Funcionario::create([
                  'nome'=>$request->nome,
                  'cpf'=> $request->cpf,
-                 'id_user' => $user->id,
+                 'user_id' => $user->id,
              ]);
 
 
@@ -69,7 +69,7 @@ class FuncionarioController extends Controller
     public function show($id)
     {
         $funcionario = Funcionario::findOrFail($id);
-        $user = User::findOrFail($funcionario->id_user);
+        $user = User::findOrFail($funcionario->user_id);
          return view('funcionario/funcionario_show',['funcionario'=>$funcionario],['user'=>$user]);
     }
 
@@ -82,7 +82,7 @@ class FuncionarioController extends Controller
     public function edit($id)
     {
         $funcionario = Funcionario::findOrFail($id);
-        $user = User::findOrFail($funcionario->id_user);
+        $user = User::findOrFail($funcionario->user_id);
          return view('/funcionario/funcionario_edit',['funcionario'=>$funcionario],['user'=>$user]);
     }
 
@@ -98,7 +98,7 @@ class FuncionarioController extends Controller
        $funcionario = Funcionario::findOrFail($id);
        $funcionario->update($request->all());
 
-       $user = User::findOrFail($funcionario->id_user);
+       $user = User::findOrFail($funcionario->user_id);
        $user->update([
             'name'=>$request->nome,
             'email' => $request->email,

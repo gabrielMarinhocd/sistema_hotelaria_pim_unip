@@ -18,8 +18,8 @@ class CreateDependentesTable extends Migration
             $table->String('nome');
             $table->String('cpf')->unique();
             $table->Integer('idade');
-            $table->unsignedBigInteger('id_hospede');
-            $table->foreign('id_hospede')->references('id')->on('hospedes');
+            $table->unsignedBigInteger('hospede_id');
+            $table->foreign('hospede_id')->references('id')->on('hospedes');
             $table->String('status');
             $table->timestamps();
         });

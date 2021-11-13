@@ -13,7 +13,7 @@ class Item_reserva extends Model
         'entrada',
         'saida',
         'forma_pagamento',
-        'id_reserva',
-        'id_quarto'
+        'reserva_id',
+        'quarto_id'
     ];
 }

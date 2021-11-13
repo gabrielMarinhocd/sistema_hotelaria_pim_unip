@@ -23,6 +23,7 @@ class User extends Authenticatable
         'password',
         'admin',
         'atendente',
+        'gerente',
         'hospede',
         'status',
     ];

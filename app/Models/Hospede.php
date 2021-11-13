@@ -16,7 +16,7 @@ class Hospede extends Model
         'endereco',
         'cep',
         'telefone',
-        'id_user',
+        'user_id',
         'status',
     ];
 }

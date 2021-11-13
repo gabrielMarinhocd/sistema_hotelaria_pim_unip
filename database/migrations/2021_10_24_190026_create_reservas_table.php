@@ -19,8 +19,8 @@ class CreateReservasTable extends Migration
             $table->Double('valor');
             $table->date('registro_saida')->nullable();
             $table->date('registro_entrada')->nullable();
-            $table->unsignedBigInteger('id_hospede');
-            $table->foreign('id_hospede')->references('id')->on('hospedes');
+            $table->unsignedBigInteger('hospede_id');
+            $table->foreign('hospede_id')->references('id')->on('hospedes');
             $table->String('status');
             $table->timestamps();
         });

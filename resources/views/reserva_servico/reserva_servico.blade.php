@@ -14,8 +14,8 @@ initial-scale=1.0">
 
   <h2>reserva_servicos</h2>
   @foreach ($reserva_servicos as $reserva_servico)
-  {{$reserva_servico->id_reserva}} <br>
-  {{$reserva_servico->id_servico}} <br>
+  {{$reserva_servico->reserva_id}} <br>
+  {{$reserva_servico->servico_id}} <br>
 
   @endforeach
 

@@ -15,10 +15,10 @@ class CreatePerfilMenusTable extends Migration
     {
         Schema::create('perfil_menus', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_perfil')->unsigned();
-            $table->unsignedBigInteger('id_menu')->unsigned();
-            $table->foreign('id_perfil')->references('id')->on('perfils');
-            $table->foreign('id_menu')->references('id')->on('menus');
+            $table->unsignedBigInteger('perfil_id')->unsigned();
+            $table->unsignedBigInteger('menu_id')->unsigned();
+            $table->foreign('perfil_id')->references('id')->on('perfils');
+            $table->foreign('menu_id')->references('id')->on('menus');
             $table->timestamps();
         });
     }

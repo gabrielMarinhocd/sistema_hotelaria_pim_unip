@@ -21,8 +21,8 @@ class CreateHospedesTable extends Migration
             $table->String('endereco');
             $table->String('cep');
             $table->String('telefone');
-            $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->String('status');
             $table->timestamps();
         });

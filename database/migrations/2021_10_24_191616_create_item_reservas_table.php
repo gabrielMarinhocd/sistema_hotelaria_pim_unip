@@ -18,10 +18,10 @@ class CreateItemReservasTable extends Migration
             $table->date('entrada');
             $table->date('saida');
             $table->String('forma_pagamento');
-            $table->unsignedBigInteger('id_reserva');
-            $table->foreign('id_reserva')->references('id')->on('reservas');
-            $table->unsignedBigInteger('id_quarto');
-            $table->foreign('id_quarto')->references('id')->on('quartos');
+            $table->unsignedBigInteger('reserva_id');
+            $table->foreign('reserva_id')->references('id')->on('reservas');
+            $table->unsignedBigInteger('quarto_id');
+            $table->foreign('quarto_id')->references('id')->on('quartos');
             $table->timestamps();
         });
     }

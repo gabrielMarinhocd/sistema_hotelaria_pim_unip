@@ -78,7 +78,7 @@ class RegisterController extends Controller
             'endereco'=> $data['endereco'],
             'cep'=> $data['cep'],
             'telefone'=> $data['telefone'],
-            'id_user' => $user->id,
+            'user_id' => $user->id,
             'status'=>'ativo',
          ]);
 

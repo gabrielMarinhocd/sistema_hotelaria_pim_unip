@@ -20,7 +20,7 @@ class DependenteController extends Controller
 
             return view('dependente/dependente',['dependentes'=>$dependentes],['hospede'=>$hospede]);
 
-            // $grouped = $dependentes->groupBy('id_hospede');
+            // $grouped = $dependentes->groupBy('hospede_id');
             // $grouped->all();
 
 
@@ -45,13 +45,13 @@ class DependenteController extends Controller
     public function store(Request $request)
     {
 
-        $hospede = Hospede::findOrFail($request->id_hospede);
+        $hospede = Hospede::findOrFail($request->hospede_id);
 
         Dependente::create([
                  'nome'=>$request->nome,
                  'cpf'=> $request->cpf,
                  'idade'=> $request->idade,
-                 'id_hospede'=> $hospede->id,
+                 'hospede_id'=> $hospede->id,
                  'status' => 'ativo',
              ]);
 
@@ -68,7 +68,7 @@ class DependenteController extends Controller
     public function show($id)
     {
         $dependente = Dependente::findOrFail($id);
-        $hospede = Hospede::findOrFail($dependente->id_hospede);
+        $hospede = Hospede::findOrFail($dependente->hospede_id);
          return view('dependente/dependente_show',['dependente'=>$dependente],['hospede'=>$hospede]);
     }
 

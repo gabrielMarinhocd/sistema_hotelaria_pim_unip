@@ -18,7 +18,7 @@ initial-scale=1.0">
   {{$reserva->valor}} <br>
   {{$reserva->registro_saida}} <br>
   {{$reserva->registro_entrada}} <br>
-  {{$reserva->id_hospede}} <br>
+  {{$reserva->hospede_id}} <br>
   {{$reserva->status}}
   @endforeach
 

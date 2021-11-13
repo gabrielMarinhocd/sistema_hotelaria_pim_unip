@@ -4,22 +4,26 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Reserva;
+use App\Models\Servico;
 
 class Reserva_servico extends Model
 {
     use HasFactory;
 
+    public $table = 'reserva_servicos';
+
     protected $fillables = [
-        'id_reserva',
-        'id_servico',
+        'reserva_id',
+        'servico_id',
     ];
 
     public function reservas(){
-        return $this->belongsTo(Reserva::class);
+        return $this->hasMany(Reserva::class, 'reserva_id');
     }
 
     public function servicos(){
-        return $this->hasMany('App\Models\Servico');
+        return $this->hasMany(Servico::class, 'servico_id');
     }
 
 }

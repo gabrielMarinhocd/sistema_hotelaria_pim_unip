@@ -16,7 +16,7 @@ initial-scale=1.0">
     <input id="nome" type="text" name="nome" placeholder="nome"><br/>
     <input id="cpf" type="text" name="cpf" placeholder="cpf"><br/>
     <input id="idade" type="text" name="idade" placeholder="idade"><br/>
-    <input id="id_hospede" type="text" name="id_hospede" placeholder="id_hospede"><br/>
+    <input id="hospede_id" type="text" name="hospede_id" placeholder="hospede_id"><br/>
     <button type="submit">Inserir</button>
   </form>
 
