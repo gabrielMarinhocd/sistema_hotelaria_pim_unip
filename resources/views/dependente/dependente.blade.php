@@ -19,14 +19,13 @@ initial-scale=1.0">
   <h2>dependente</h2>
   @foreach ($dependentes as $dependente)
     @if ($hospede->id == $dependente-> )
-          {{$dependente->id}}<br>
+            {{$dependente->id}}<br>
             {{$dependente->nome}}<br>
             {{$dependente->cpf}}<br>
             {{$dependente->idade}}<br>
             {{$dependente->status}}<br>
             {{$hospede->nome}}<br>
             {{$hospede->cpf}}<br>
-
     @endif
 
   @endforeach
