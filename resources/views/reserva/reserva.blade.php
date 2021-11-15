@@ -10,6 +10,7 @@ initial-scale=1.0">
 </head>
 
 <body>
+    @include('elements/menu_admin')
   <h1>reservas</h1>
 
   <h2>reservas</h2>

@@ -28,20 +28,19 @@ class HomeController extends Controller
 
     public function admin()
     {
-        return 'Yeahhh autenticado como admin';
-        return route('menu');
+        return route('reservas');
     }
 
     public function atendente(){
-        return 'Yeahh autenticado como atendente';
+        return route('reservas');
     }
 
     public function hospede(){
-        return 'Yeah autenticado como hospede';
+        return route('quarto');
     }
 
     public function gerente(){
-        return 'Yeah autenticado como gerente';
+        return route('reservas');
     }
 
 }

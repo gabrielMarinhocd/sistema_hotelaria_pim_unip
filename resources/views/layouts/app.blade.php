@@ -53,7 +53,7 @@
                             @endif
                         @else
 
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('admin') }}">Admin</a>
                         </li>
@@ -62,7 +62,10 @@
                             }}">Atendente</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="{{ route('hospede') }}">Hospede</a>Dados para testes
+                           <a class="nav-link" href="{{ route('hospede') }}">Hospede</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="{{ route('gerente') }}">Gerente</a>
                         </li>
 
                            <li class="nav-item dropdown">
