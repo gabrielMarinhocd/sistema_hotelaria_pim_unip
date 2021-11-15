@@ -10,17 +10,25 @@ initial-scale=1.0">
 </head>
 
 <body>
+    @includeWhen(auth()->user()->admin, 'elements/menu_admin')
+    @includeWhen(auth()->user()->gerente, 'elements/menu_gerente')
+    @includeWhen(auth()->user()->atendente, 'elements/menu_atendente')
+    @includeWhen(auth()->user()->hospede, 'elements/menu_hospede')
   <h1>dependentes</h1>
 
   <h2>dependente</h2>
   @foreach ($dependentes as $dependente)
-  {{$dependente->id}}<br>
-  {{$dependente->nome}}<br>
-  {{$dependente->cpf}}<br>
-  {{$dependente->idade}}<br>
-  {{$dependente->status}}<br>
-  {{$hospede->nome}}<br>
-  {{$hospede->cpf}}<br>
+    @if ($hospede->id == $dependente-> )
+          {{$dependente->id}}<br>
+            {{$dependente->nome}}<br>
+            {{$dependente->cpf}}<br>
+            {{$dependente->idade}}<br>
+            {{$dependente->status}}<br>
+            {{$hospede->nome}}<br>
+            {{$hospede->cpf}}<br>
+
+    @endif
+
   @endforeach
 
 </body>
