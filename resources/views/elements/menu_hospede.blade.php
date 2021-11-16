@@ -31,17 +31,23 @@
                 @else
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin') }}">Admin</a>
+                    <a class="nav-link" href="{{ route('quarto') }}">Quarto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('atendente')
-                    }}">Atendente</a>
+                    <a class="nav-link" href="{{ route('servico')
+                    }}">servico</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('hospede') }}">Hospede</a>
+                    <a class="nav-link" href="{{ route('hospede/show/id') }}">Hospede</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('gerente') }}">Gerente</a>
+                    <a class="nav-link" href="{{ route('dependente') }}">dependente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('reserva') }}">reserva</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('reserva_servico') }}">reserva</a>
                 </li>
 
                     <li class="nav-item dropdown">

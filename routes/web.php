@@ -79,6 +79,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::middleware('admin')->group(function(){
     Route::get('/admin', [HomeController::class,'admin'])->name('admin');
+
     Route::get('/menu', [MenuController::class,'index'])->name('menus');
     Route::get('/menu/create', [MenuController::class,'create'])->name('menu_create');
     Route::get('/menu/show/{id}', [MenuController::class, 'show'])->name('menu_show');
@@ -144,13 +145,13 @@ Route::middleware('admin')->group(function(){
     Route::get('/reserva/delete/{id}', [ReservaController::class,'destroy'])->name('reserva_delete');
 
 
-    Route::get('/reserva_servico', [ReservaServicosController::class,'index'])->name('reserva_servico');
-    Route::get('/reserva_servico/create', [ReservaServicosController::class,'create'])->name('reserva_servico_create');
-    Route::post('/reserva_servico/store', [ReservaServicosController::class, 'store'])->name('reserva_servico_store');
-    Route::get('/reserva_servico/show/{id}', [ReservaServicosController::class, 'show'])->name('reserva_servico_show');
-    Route::get('/reserva_servico/edit/{id}', [ReservaServicosController::class, 'edit'])->name('reserva_servico_edit');
-    Route::post('/reserva_servico_update/{id}',[ReservaServicosController::class,'update'])->name('reserva_servico_update');
-    Route::get('/reserva_servico/delete/{id}',[ReservaServicosController::class,'destroy'])->name('reserva_servico_delete');
+    // Route::get('/reserva_servico', [ReservaServicosController::class,'index'])->name('reserva_servico');
+    // Route::get('/reserva_servico/create', [ReservaServicosController::class,'create'])->name('reserva_servico_create');
+    // Route::post('/reserva_servico/store', [ReservaServicosController::class, 'store'])->name('reserva_servico_store');
+    // Route::get('/reserva_servico/show/{id}', [ReservaServicosController::class, 'show'])->name('reserva_servico_show');
+    // Route::get('/reserva_servico/edit/{id}', [ReservaServicosController::class, 'edit'])->name('reserva_servico_edit');
+    // Route::post('/reserva_servico_update/{id}',[ReservaServicosController::class,'update'])->name('reserva_servico_update');
+    // Route::get('/reserva_servico/delete/{id}',[ReservaServicosController::class,'destroy'])->name('reserva_servico_delete');
 });
 
 Route::middleware('gerente')->group(function(){
@@ -202,13 +203,13 @@ Route::middleware('gerente')->group(function(){
     Route::post('/reserva_update/{id}', [ReservaController::class,'update'])->name('reserva_update');
     Route::get('/reserva/delete/{id}', [ReservaController::class,'destroy'])->name('reserva_delete');
 
-    Route::get('/reserva_servico', [ReservaServicosController::class,'index'])->name('reserva_servico');
-    Route::get('/reserva_servico/create', [ReservaServicosController::class,'create'])->name('reserva_servico_create');
-    Route::post('/reserva_servico/store', [ReservaServicosController::class, 'store'])->name('reserva_servico_store');
-    Route::get('/reserva_servico/show/{id}', [ReservaServicosController::class, 'show'])->name('reserva_servico_show');
-    Route::get('/reserva_servico/edit/{id}', [ReservaServicosController::class, 'edit'])->name('reserva_servico_edit');
-    Route::post('/reserva_servico_update/{id}',[ReservaServicosController::class,'update'])->name('reserva_servico_update');
-    Route::get('/reserva_servico/delete/{id}',[ReservaServicosController::class,'destroy'])->name('reserva_servico_delete');
+    // Route::get('/reserva_servico', [ReservaServicosController::class,'index'])->name('reserva_servico');
+    // Route::get('/reserva_servico/create', [ReservaServicosController::class,'create'])->name('reserva_servico_create');
+    // Route::post('/reserva_servico/store', [ReservaServicosController::class, 'store'])->name('reserva_servico_store');
+    // Route::get('/reserva_servico/show/{id}', [ReservaServicosController::class, 'show'])->name('reserva_servico_show');
+    // Route::get('/reserva_servico/edit/{id}', [ReservaServicosController::class, 'edit'])->name('reserva_servico_edit');
+    // Route::post('/reserva_servico_update/{id}',[ReservaServicosController::class,'update'])->name('reserva_servico_update');
+    // Route::get('/reserva_servico/delete/{id}',[ReservaServicosController::class,'destroy'])->name('reserva_servico_delete');
 });
 
 Route::middleware('atendente')->group(function(){
@@ -293,19 +294,19 @@ Route::middleware('atendente')->group(function(){
 
     //reserva_servico
 
-    Route::get('/reserva_servico', [ReservaServicosController::class,'index'])->name('reserva_servico');
+    // Route::get('/reserva_servico', [ReservaServicosController::class,'index'])->name('reserva_servico');
 
-    Route::get('/reserva_servico/create', [ReservaServicosController::class,'create'])->name('reserva_servico_create');
+    // Route::get('/reserva_servico/create', [ReservaServicosController::class,'create'])->name('reserva_servico_create');
 
-    Route::post('/reserva_servico/store', [ReservaServicosController::class, 'store'])->name('reserva_servico_store');
+    // Route::post('/reserva_servico/store', [ReservaServicosController::class, 'store'])->name('reserva_servico_store');
 
-    Route::get('/reserva_servico/show/{id}', [ReservaServicosController::class, 'show'])->name('reserva_servico_show');
+    // Route::get('/reserva_servico/show/{id}', [ReservaServicosController::class, 'show'])->name('reserva_servico_show');
 
-    Route::get('/reserva_servico/edit/{id}', [ReservaServicosController::class, 'edit'])->name('reserva_servico_edit');
+    // Route::get('/reserva_servico/edit/{id}', [ReservaServicosController::class, 'edit'])->name('reserva_servico_edit');
 
-    Route::post('/reserva_servico_update/{id}',[ReservaServicosController::class,'update'])->name('reserva_servico_update');
+    // Route::post('/reserva_servico_update/{id}',[ReservaServicosController::class,'update'])->name('reserva_servico_update');
 
-    Route::get('/reserva_servico/delete/{id}',[ReservaServicosController::class,'destroy'])->name('reserva_servico_delete');
+    // Route::get('/reserva_servico/delete/{id}',[ReservaServicosController::class,'destroy'])->name('reserva_servico_delete');
 });
 
 Route::middleware('hospede')->group(function(){
@@ -340,12 +341,11 @@ Route::middleware('hospede')->group(function(){
     Route::post('/reserva_update/{id}', [ReservaController::class,'update'])->name('reserva_update');
     Route::get('/reserva/delete/{id}', [ReservaController::class,'destroy'])->name('reserva_delete');
 
-    Route::get('/reserva_servico', [ReservaServicosController::class,'index'])->name('reserva_servico');
-    Route::get('/reserva_servico/create', [ReservaServicosController::class,'create'])->name('reserva_servico_create');
-    Route::post('/reserva_servico/store', [ReservaServicosController::class, 'store'])->name('reserva_servico_store');
-    Route::get('/reserva_servico/show/{id}', [ReservaServicosController::class, 'show'])->name('reserva_servico_show');
-    Route::get('/reserva_servico/edit/{id}', [ReservaServicosController::class, 'edit'])->name('reserva_servico_edit');
-    Route::post('/reserva_servico_update/{id}',[ReservaServicosController::class,'update'])->name('reserva_servico_update');
-
-    Route::get('/reserva_servico/delete/{id}',[ReservaServicosController::class,'destroy'])->name('reserva_servico_delete');
+    // Route::get('/reserva_servico', [ReservaServicosController::class,'index'])->name('reserva_servico');
+    // Route::get('/reserva_servico/create', [ReservaServicosController::class,'create'])->name('reserva_servico_create');
+    // Route::post('/reserva_servico/store', [ReservaServicosController::class, 'store'])->name('reserva_servico_store');
+    // Route::get('/reserva_servico/show/{id}', [ReservaServicosController::class, 'show'])->name('reserva_servico_show');
+    // Route::get('/reserva_servico/edit/{id}', [ReservaServicosController::class, 'edit'])->name('reserva_servico_edit');
+    // Route::post('/reserva_servico_update/{id}',[ReservaServicosController::class,'update'])->name('reserva_servico_update');
+    // Route::get('/reserva_servico/delete/{id}',[ReservaServicosController::class,'destroy'])->name('reserva_servico_delete');
 });
