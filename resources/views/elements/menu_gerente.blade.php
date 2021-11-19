@@ -39,7 +39,7 @@
                     }}">servico</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('hospede/show/id') }}">Hospede</a>
+                    <a class="nav-link" href="{{ route('hospede') }}">Hospede</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('dependente') }}">dependente</a>

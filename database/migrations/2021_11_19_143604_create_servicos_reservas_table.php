@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ReservaServico extends Migration
+class CreateServicosReservasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class ReservaServico extends Migration
      */
     public function up()
     {
-        Schema::create('reserva_servicos', function (Blueprint $table) {
+        Schema::create('servicos_reservas', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('reserva_id');
             $table->unsignedBigInteger('servico_id');
@@ -21,7 +21,6 @@ class ReservaServico extends Migration
             $table->foreign('servico_id')->references('id')->on('servicos')->onDelete('cascade');
             $table->timestamps();
         });
-
     }
 
     /**
@@ -31,6 +30,6 @@ class ReservaServico extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reserva_servicos');
+        Schema::dropIfExists('servicos_reservas');
     }
 }

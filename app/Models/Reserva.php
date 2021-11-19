@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Reserva_servico;
+use App\Models\Servicos_reserva;
 
 class Reserva extends Model
 {
@@ -20,9 +20,8 @@ class Reserva extends Model
     ];
 
 
-    public function reserva_servicos(){
-        return $this->belongsToMany('App\Models\Reserva_servico', 'reserva_servicos', 'reserva_id', 'servico_id');
+    public function servicos_reserva(){
+        return  $this->hasMany(Servicos_reserva::class);
     }
-
 
 }

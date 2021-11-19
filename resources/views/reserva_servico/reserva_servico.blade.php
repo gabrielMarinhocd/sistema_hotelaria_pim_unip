@@ -10,10 +10,10 @@ initial-scale=1.0">
 </head>
 
 <body>
-    @includeWhen(auth()->user()->admin, 'elements/menu_admin')
+    {{-- @includeWhen(auth()->user()->admin, 'elements/menu_admin')
     @includeWhen(auth()->user()->gerente, 'elements/menu_gerente')
     @includeWhen(auth()->user()->atendente, 'elements/menu_atendente')
-    @includeWhen(auth()->user()->hospede, 'elements/menu_hospede')
+    @includeWhen(auth()->user()->hospede, 'elements/menu_hospede') --}}
   <h1>reserva_servicos</h1>
 
   <h2>reserva_servicos</h2>

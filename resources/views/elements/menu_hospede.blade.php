@@ -35,19 +35,16 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('servico')
-                    }}">servico</a>
+                    }}">Serviço</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('hospede/show/id') }}">Hospede</a>
+                    <a class="nav-link" href="{{ route('hospede') }}">Hospede</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('dependente') }}">dependente</a>
+                    <a class="nav-link" href="{{ route('reserva') }}">Reserva</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('reserva') }}">reserva</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('reserva_servico') }}">reserva</a>
+                    <a class="nav-link" href="{{ route('reserva_servico') }}">Reserva Servicos</a>
                 </li>
 
                     <li class="nav-item dropdown">

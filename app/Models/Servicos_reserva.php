@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Reserva;
 use App\Models\Servico;
 
-class Reserva_servico extends Model
+class Servicos_reserva extends Model
 {
     use HasFactory;
 
@@ -23,5 +23,4 @@ class Reserva_servico extends Model
     public function servico(){
         return $this->belongsTo(Servico::class);
     }
-
 }
