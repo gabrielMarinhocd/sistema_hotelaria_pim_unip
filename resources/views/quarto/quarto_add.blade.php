@@ -10,9 +10,7 @@ initial-scale=1.0">
 </head>
 
 <body>
-    @includeWhen(auth()->user()->admin, 'elements/menu_admin')
-    @includeWhen(auth()->user()->gerente, 'elements/menu_gerente')
-    @includeWhen(auth()->user()->atendente, 'elements/menu_atendente')
+    @includeWhen(auth()->user()->funcionario, 'elements/menu_admin')
     @includeWhen(auth()->user()->hospede, 'elements/menu_hospede')
   <h1>Inserir quartos</h1>
     <form method="POST" action="{{ route('quarto_store') }}">

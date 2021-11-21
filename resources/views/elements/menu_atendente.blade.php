@@ -42,7 +42,7 @@
                     <a class="nav-link" href="{{ route('hospede') }}">Hospede</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('dependente/' + auth()->user()->id) }}">dependente</a>
+                    <a class="nav-link" href="{{ route('dependente')}}">dependente</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('funcionario') }}">funcionario</a>

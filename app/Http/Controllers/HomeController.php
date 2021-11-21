@@ -26,21 +26,13 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function admin()
+    public function funcionario()
     {
-        return 'Yeahh autenticado como admin';
-    }
-
-    public function atendente(){
-       return 'Yeahh autenticado como atendente';
+        return 'Yeahh autenticado como funcionario';
     }
 
     public function hospede(){
         return 'Yeahh autenticado como hospede';
-    }
-
-    public function gerente(){
-        return 'Yeahh autenticado como gerente';
     }
 
 }

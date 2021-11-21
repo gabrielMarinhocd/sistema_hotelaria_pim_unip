@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class GerenteACL
+class FuncionarioACL
 {
     /**
      * Handle an incoming request.
@@ -16,9 +16,14 @@ class GerenteACL
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->check() && auth()->user()->gerente){
+
+        if(auth()->check() && auth()->user()->admin){
+            return $next($request);
+        } else if(auth()->check() && auth()->user()->atendente){
+            return $next($request);
+        } else if(auth()->check() && auth()->user()->gerente){
             return $next($request);
         }
-            dd('Sem acesso de Gerente');
-        }
+            dd('Sem acesso de funcionario');
+    }
 }

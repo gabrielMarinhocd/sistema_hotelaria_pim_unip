@@ -55,18 +55,12 @@
 
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin') }}">Admin</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('atendente')
-                            }}">Atendente</a>
+                            <a class="nav-link" href="{{ route('funcionario-auth') }}">funcionario</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="{{ route('hospede') }}">Hospede</a>
                         </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="{{ route('gerente') }}">Gerente</a>
-                        </li>
+
 
                            <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
